@@ -55,7 +55,7 @@
 			'bdport' => '',
 			'bd' => 'expose_develop',
 			'bduser' => 'root',
-			'bdpass' => '3xp0s3@MySql-1',
+			'bdpass' => 'C1t10us@MySql-1',
 			'bdprefix' => ''
 		);
 			$url_server = "http://develop.expose.io/";
@@ -68,7 +68,7 @@
 				'bdport' => '',
 				'bd' => 'expose',
 				'bduser' => 'root',
-				'bdpass' => '3xp0s3@MySql-1',
+				'bdpass' => 'C1t10us@MySql-1',
 				'bdprefix' => ''
 			);
 			$url_server = "http://www.expose.io/";
