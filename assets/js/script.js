@@ -3,7 +3,7 @@ var $_s=new Array();
 
 // Producción
 var $_URL_SERVER = "http://www.appexpose.com/";
-var $_SERVER_PATH = "../../"+$_PATH;
+var $_SERVER_PATH = "http://www.appexpose.com/server/1.0.0/";
 
 // Development Server
 //var $_URL_SERVER = "http://develop.appexpose.com/";
