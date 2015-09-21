@@ -2,7 +2,7 @@
 
   /************************************************************
   * Expose Team
-  * Author: Pablo Gutierrez Alfaro <pablo@expose.io>
+  * Author: Pablo Gutierrez Alfaro <pablo@appexpose.com>
   * Creation Modification: 19-09-2015
   * Last Modification: 19-09-2015
   * licensed through Copyright 2015

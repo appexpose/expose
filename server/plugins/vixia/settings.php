@@ -59,7 +59,7 @@
 			'bdpass' => '3xp0s3@MySql-1',
 			'bdprefix' => ''
 		);
-			$url_server = "http://develop.expose.io/";
+			$url_server = "http://develop.appexpose.com/";
 		break;
 
 		case "server":
@@ -72,7 +72,7 @@
 				'bdpass' => '3xp0s3@MySql-1',
 				'bdprefix' => ''
 			);
-			$url_server = "http://www.expose.io/";
+			$url_server = "http://www.appexpose.com/";
 			break;
 	}
 
