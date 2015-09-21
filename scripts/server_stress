@@ -1,0 +1,6 @@
+#!/bin/bash
+for (( c=0;c<=1000 ;c++ ))
+do
+  wget http://www.spvtracking.com/login -O /dev/null 2> /dev/null
+  echo [$1]$c
+done
