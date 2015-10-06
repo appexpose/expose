@@ -65,6 +65,26 @@
       $action_data["number"]=str_replace("-","",$action_data["number"]);
       $action_data["number"]=str_replace(" ","",$action_data["number"]);
 
+      $table="searchs";
+      $data=array();
+      $data["device_key"]=$action_data["device_key"];
+      $data["number"]=$action_data["number"];
+      $data["created"]=$timestamp;
+      $data["system"]=$action_data["system"];
+      $data["version"]=$action_data["version"];
+      $search=$data;
+      $search["id_search"]=addInBD($table,$data);
+      $search["search_key"]=sha1($search["id_search"]."expose_search".$timestamp);
+
+      $table="searchs";
+      $filter=array();
+      $filter["id_search"]=array("operation"=>"=","value"=>$search["id_search"]);
+      $data=array();
+      $data["search_key"]=$search["search_key"];
+      updateInBD($table,$filter,$data);
+
+
+
       $table="comments";
       $filter=array();
       $filter["number"]=array("operation"=>"=","value"=>$action_data["number"]);
@@ -141,28 +161,26 @@
       // Check Input Data
       if(!@checkInputData($action_data["device_key"],"device_key")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["comment_key"],"comment_key")){echo json_encode($response);die();}
+      if(!@checkInputData($action_data["report_option"],"report_option")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["system"],"system")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["version"],"version")){echo json_encode($response);die();}
 
       if(!@checkDeviceKey($action_data["device_key"])){echo json_encode($response);die();}
       if(!@checkSystemVersion($action_data["system"],$action_data["version"])){echo json_encode($response);die();}
 
-      $action_data["number"]=str_replace("+","00",$action_data["number"]);
-      $action_data["number"]=str_replace("-","",$action_data["number"]);
-      $action_data["number"]=str_replace(" ","",$action_data["number"]);
-
-      $table="comments_reports";
+      $table="comment_reports";
       $data=array();
       $data["device_key"]=$action_data["device_key"];
       $data["comment_key"]=$action_data["comment_key"];
-      $data["created"]=$action_data["created"];
+      $data["report_option"]=$action_data["report_option"];
+      $data["created"]=$timestamp;
       $data["system"]=$action_data["system"];
       $data["version"]=$action_data["version"];
       $comment_report=$data;
       $comment_report["id_comment_report"]=addInBD($table,$data);
-      $comment_report["comment_report_key"]=sha1($comment["id_comment_report"]."expose_report_comment".$timestamp);
+      $comment_report["comment_report_key"]=sha1($comment_report["id_comment_report"]."expose_report_comment".$timestamp);
 
-      $table="comments_reports";
+      $table="comment_reports";
       $filter=array();
       $filter["id_comment_report"]=array("operation"=>"=","value"=>$comment_report["id_comment_report"]);
       $data=array();
@@ -171,7 +189,7 @@
 
       $table="comments";
       $filter=array();
-      $filter["id_comment"]=array("operation"=>"=","value"=>$comment["id_comment"]);
+      $filter["comment_key"]=array("operation"=>"=","value"=>$action_data["comment_key"]);
       $data=array();
       $data["reported"]=1;
       updateInBD($table,$filter,$data);

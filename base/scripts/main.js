@@ -752,11 +752,6 @@ $(document).ready(function() {
             slidesPerView: 'auto'
         });
 
-        // Start OwlCarousel
-        $('.owl-carousel').owlCarousel({
-          //autoPlay : false
-        });
-
         // PrettyPhoto initialization
         $('a[data-rel]').each(function() {
             $(this).attr('rel', $(this).data('rel'));

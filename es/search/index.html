@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Espose - Buscar</title>
+    <title>Expose - Buscar</title>
     <meta name="description" content="Search results page">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../../base/styles/bootstrap.min.css">
     <link rel="stylesheet" href="../../base/styles/main.css">
     <link rel="stylesheet" href="../../base/styles/main-responsive.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
     <link id="primary_color_scheme" rel="stylesheet" href="../../base/styles/theme_meadow.css">
     <script src="../../base/scripts/vendor/modernizr.js"></script>
@@ -40,6 +41,80 @@
   </head>
   <body>
 
+    <div class="modal fade" id="confirm_report_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form id='form-report-comment'>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Denunciar comentario</h4>
+            </div>
+            <div id='form-report-comment-display'>
+              <div class='visible-init'>
+                <div class="modal-body">
+                  <p>Ayudanos a filtrar los comentarios y elige el motivo</p>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class='radio_default' name="report_option" id="report_option" value="offensive" checked>
+                      Es molesto o no es interesante
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="report_option" id="report_option" value="not_to_expose">
+                      Creo que no debe estar en Expose
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="report_option" id="report_option" value="spam">
+                      Es spam
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="report_option" value="other">
+                      Otros
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <input type='hidden' id='comment_key' value=''/>
+                  <button type="submit" class="btn btn-sm btn-square btn-primary">Continuar</button>
+                </div>
+              </div>
+              <div class='visible-loading hidden'>
+                <div class="modal-body">
+                  <h3><i class="fa fa-circle-o-notch fa-spin"></i> Enviado</h3>
+                  <p>Esta operación puede tardar unos segundos</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="close" data-dismiss="modal" aria-label="Close" class="btn btn-sm btn-square btn-danger">Cancelar</button>
+                </div>
+              </div>
+              <div class='visible-error hidden'>
+                <div class="modal-body">
+                  <h3><i class="fa fa-times"></i> Error</h3>
+                  <p>No se ha podido completar la operación</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="close" data-dismiss="modal" aria-label="Close" class="btn btn-sm btn-square btn-danger">Cancelar</button>
+                </div>
+              </div>
+              <div class='visible-success hidden'>
+                <div class="modal-body">
+                  <h3><i class="fa fa-check"></i> Comentario eliminado</h3>
+                  <p>Muchas gracias por colaborar</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="close" data-dismiss="modal" aria-label="Close" class="btn btn-sm btn-square btn-primary">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div id="load"></div><!--[if lt IE 9]>
     <p class="browsehappy">You are using an strong outdated browser. <br>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -91,7 +166,7 @@
           <div id='form-search-display'>
             <div class='row form-display visible-init'>
               <div class='col-md-12 sep-bottom-4x'>
-                <h3 class='text-right'>Introduce en número que quieres buscar</h3>
+                <h3 class='text-right'>Introduce el número que quieres buscar</h3>
                 <h5 class='text-right'>Te mostraremos todas las valoraciones que hay sobre ese número.</h5>
                 <p class='text-right'>El uso de Expose está regido bajo los <a href='../terms/index.html'>términos y condiciones del servicio, pincha aquí para leerlos</a>.</p>
               </div>
@@ -124,7 +199,7 @@
                 <p class='text-right'>Inténtalo de nuevo más tarde.</p>
               </div>
             </div>
-            <div class="row form-display visible-success visible-no-data">
+            <div class="row form-display visible-success visible-no-data hidden">
               <div class='col-md-3'>
               </div>
               <div class='col-md-9'>
@@ -164,7 +239,8 @@
                             <div class="form-group">
                               <textarea id="content" placeholder="Introduce tu comentario" rows="6" name="content" class="form-control input-lg required" aria-required="true"></textarea>
                             </div>
-                            <p class='small'>Pulsando enviar comentario aceptas los <a href='' class='text-primary'>términos y condiciones</a> del servicio</p>
+                            <p class='small'>Realiza un uso apropiado de Expose, no ofendas, calumnies o engañes. Si quieres saber más <a href='../usage_guide/' target='_blank' class='text-primary'>visita nuestra guía de uso</a>.</p>
+                            <p class='small'>Pulsando enviar comentario aceptas los <a href='../terms/' target='_blank' class='text-primary'>términos y condiciones</a> del servicio</p>
 
                             <div class='form-group'>
                               <a href="#add_comment_button" class="pull-left btn btn-dark btn-bordered btn-xs" aria-controls="add_comment" role="tab" data-toggle="tab">Cancelar</a>
@@ -191,20 +267,29 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <img src="../../assets/img/expose-logo-white.png" alt="" class="logo">
-                <small class="sep-top-xs">There are many variations of passages of Lorem Ipsum available</small>
-                <ul class="social-icon sep-top-sm">
+                <p class="sep-top-xs"><a href='../terms/'>Términos y condiciones</a> · <a href='../privacy/'>Política de privacidad</a></p>
+                <!--<ul class="social-icon sep-top-sm">
                   <li><a href="#" class="fa fa-twitter fa-2x"></a></li>
                   <li><a href="#" class="fa fa-facebook fa-2x"></a></li>
                   <li><a href="#" class="fa fa-google-plus fa-2x"></a></li>
-                </ul>
+                </ul>-->
               </div>
             </div>
           </div>
         </div>
-        <div class="copyright sep-top-xs sep-bottom-xs">
+        <div class="copyright sep-top-xs sep-bottom-md">
           <div class="container">
             <div class="row">
-              <div class="col-md-12 text-center"><small>Copyright 2015 © Expose Team. All rights reserved.</small></div>
+              <div class="col-md-12 text-center"><small>Copyright 2015 © App Expose. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer id="cookies_footer" style="position:fixed;bottom:0;background-color:#000;color:white;padding:5px;width:100%">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="small text-left margin-0">App Expose está regido por los <a href='../terms/' target='_blank'>términos y condiciones</a> y <a href='../privacy/' target='_blank'>la política de privaidad</a>. Navegar por el Sitio Web y utilizarlo implica la aceptación y lectura dichos documentos.</p>
             </div>
           </div>
         </div>
@@ -245,7 +330,6 @@
 
     <script src="../../assets/js/search/script.js"></script>
     <script src="../../assets/js/script.js"></script>
-
 
     <script src="../../base/scripts/main.js"></script>
   </body>

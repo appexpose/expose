@@ -1,0 +1,544 @@
+<svg height="200px" width="100%">
+    <text x='10' y='20' style='fill:red;'>CULTURAL</text>
+<text x='10' y='40' style='fill:red;'>ADULTOS</text>
+<text x='10' y='60'>BAILE</text>
+<text x='10' y='80'>TEATRO</text>
+<text x='10' y='100'>ENSAIO OBRA DE TEATRO</text>
+<text x='10' y='120'>ENSAIO DANZA CREATIVA</text>
+<text x='10' y='140'>ENSAIO DE TEATRO CON MAQUILLAXE</text>
+<text x='10' y='160'>CONFERENCIA: EL PACIENTE ACTIVO Y PARTICIPATIVO</text>
+<text x='10' y='180'>ENSAIO OBRA DE TEATRO MARIDAXE</text>
+<text x='10' y='200'>PREPARACIÓN ESCENARIO CASA ANDALUCIA</text>
+<text x='10' y='220'>ENSAIO PANDERETAS</text>
+<text x='10' y='240'>ENSAIOS GRUPO TEATRO</text>
+<text x='10' y='260'>AUDICIÓNS V-GO NEGRO SON</text>
+<text x='10' y='280'>ENSAIOS CORO NEGRO SON</text>
+<text x='10' y='300'>ENSAIO FATIGA FUSIÓN</text>
+<text x='10' y='320'>ENSAIO TEATRO</text>
+<text x='10' y='340'>ENSAIO DE TEATRO</text>
+<text x='10' y='360'>ENSAIO OBRA TEATRAL</text>
+<text x='10' y='380'>PREAPARATIVOS  PARA O FESTIVAL DO 23 DE ABRIL</text>
+<text x='10' y='400'>ENSAIO CUARTETO MÚSICA</text>
+<text x='10' y='420'>REUNIÓN PARA ORGANIZAR ENSAYOS Y OTROS</text>
+<text x='10' y='440'>CLASES DE TEATRO</text>
+<text x='10' y='460'>GRAVACIÓN  ENSAIO TEATRO</text>
+<text x='10' y='480'>ENSAIO FINAL OBRA TEATRO</text>
+<text x='10' y='500'>ENSAIO OPERA</text>
+<text x='10' y='520'>ENSAIO OBRA TEATRO</text>
+<text x='10' y='540'>ENSAIO Y PREPARATIVOS OBRA FINAL</text>
+<text x='10' y='560'>ENSAIO GRUPO FATIGA FUSIÓN</text>
+<text x='10' y='580'>ENSAIO CORO</text>
+<text x='10' y='600'>CLASES DANZA CONTEMPORÁNEA</text>
+<text x='10' y='620'>ENSAIO TEATRO TEATRO VICUS</text>
+<text x='10' y='640'>PREPARATIVOS DE OBRA DE TEATRO</text>
+<text x='10' y='660'>PRUEBA EQUIPO SONIDO Y PROYECCIÓN</text>
+<text x='10' y='680'>ENSAIO FUNCIÓN TANGO POR AFRICA</text>
+<text x='10' y='700'>ENSAIO DANZA</text>
+<text x='10' y='720'>CLASES DE BAILES LATINOS</text>
+<text x='10' y='740'>VIDEOCONFERENCIA ASMORGA</text>
+<text x='10' y='760'>DANZA GUITERREZ HORMAZABAN</text>
+<text x='10' y='780'>TEATRO ACTUACIÓN ÑAQUE O DE PIOJOS Y ACTORES</text>
+<text x='10' y='800'>ENSAIO OBRA DE TEATRO OH DIOS MIO SOMOS MAMIFEROS</text>
+<text x='10' y='820'> TEATRO ACTUACIÓN OH DIOS MIO SOMOS MAMIFEROS</text>
+<text x='10' y='840'>ENSAIO OBRA DE TEATRO ROSALIA EL REENCUENTRO</text>
+<text x='10' y='860'>TEATRO ACTUACIÓN ROSALIA EL REENCUENTRO</text>
+<text x='10' y='880'>CONFERENCIA CRECEMENTO PERSOAL,LÓGICA CONVERXENTE</text>
+<text x='10' y='900'>CREA A TÚA TARTA DE NAVIDAD</text>
+<text x='10' y='920'>ENSAIOS MUSICAL GRISE</text>
+<text x='10' y='940'>ENSAIOS ESPECTÁCULO O CRÉDITO</text>
+<text x='10' y='960'>PROXECCIÓN DOCUMENTAL KRISHANAMURTI GALICIA</text>
+<text x='10' y='980' style='fill:red;'>CATIVOS</text>
+<text x='10' y='1000'>PINTURA NENOS</text>
+<text x='10' y='1020'>AEROBIC CON BAILE MODERNO</text>
+<text x='10' y='1040'>BALLET PARA NEN@S</text>
+<text x='10' y='1060'>TEATRO PARA NEN@S</text>
+<text x='10' y='1080'>ENSAIO FESTIVAL FIN DE CURSO</text>
+<text x='10' y='1100'>ENSAIOS</text>
+<text x='10' y='1120'>ENSAIO FESTA FIN DE CURSO</text>
+<text x='10' y='1140'>ENSAIOS FESTIVAL DE NADAL</text>
+<text x='10' y='1160'>FESTIVAL FIN DE CURSO ENSAIOS</text>
+<text x='10' y='1180'>ENSAIO DE BAILE SASHA FEELS</text>
+<text x='10' y='1200'>CLUBE LECTURA, CONTA CONTOS</text>
+<text x='10' y='1220'>ENSAIO DE BAILE</text>
+<text x='10' y='1240'>HINCHABLES INFANTILES MUNDIAL FÚTBOL</text>
+<text x='10' y='1260'>PREPARATIVOS FESTIVAL POSSUMUS</text>
+<text x='10' y='1280'>ENSAIO FESTIVAL NADAL</text>
+<text x='10' y='1300'>ENSAIOS FESTIVAL NADAL</text>
+<text x='10' y='1320'>ARTATTCK : INMERSIÓN LINGUÍSTICA</text>
+<text x='10' y='1340'>OBRA DE TEATRO EN INGLÉS COLEXIO SAN MIGUEL</text>
+<text x='10' y='1360'>FUNCIÓN DE TEATRO, GRUPO DE TEATRO TEIS</text>
+<text x='10' y='1380'>ENSAIOS FESTIVAL BAILE MODERNO</text>
+<text x='10' y='1400' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='1420'>OBRA DE TEATRO GRUPO JOSE MEJUTO</text>
+<text x='10' y='1440'>ACTUACIÓN TEATRO GRUPO TEIS</text>
+<text x='10' y='1460'>MUESTRA DE DANZA BRUNO MORO</text>
+<text x='10' y='1480'>REPRESENTACIÓN OBRA DE TEATRO</text>
+<text x='10' y='1500'>REPRESENTACIÓN BENÉFICA DA OBRA TURANDOT</text>
+<text x='10' y='1520'>FESTIVAL INTERCOLEXIAL</text>
+<text x='10' y='1540'>FESTIVAL FIN DE CURSO</text>
+<text x='10' y='1560'>FESTIVAL EXHIBICIÓN DE DANZA DA ESCOLA VIGO BAILANDO</text>
+<text x='10' y='1580'>OBRA DE TEATRO TOCANDO FONDO</text>
+<text x='10' y='1600'>FESTIVAL DE NADAL</text>
+<text x='10' y='1620'>FESTIVAL DE NADAL DAS DÚAS PARROQUIAS</text>
+<text x='10' y='1640'>FESTIVAL DE BAILE MODERNO DO GRUPO DA AAVV DE TEIS</text>
+<text x='10' y='1660'>XORNADAS DE DINAMIZACIÓN XUVENIL E PROMOCIÓN DA CULTURA GEEK E XAPONESA</text>
+<text x='10' y='1680'>GRADUCACIÓN INFANTIL</text>
+<text x='10' y='1700'>FESTIVAL NAVIDAD</text>
+<text x='10' y='1720'>CONCERTO DE VIOLÍN E BATERÍA</text>
+<text x='10' y='1740'>DOC. MUSICAL MURGAS</text>
+<text x='10' y='1760'>FESTA VECIÑAL</text>
+<text x='10' y='1780'>CONCERTO DE VIOLÍN  ELÉCTRICO</text>
+<text x='10' y='1800'>GALA BENÉFICA</text>
+<text x='10' y='1820'>ACTUACIÓN DE DANZA CPI CELSO EMILIO FERREIRO</text>
+<text x='10' y='1840'>ACTUACIÓN BAILE</text>
+<text x='10' y='1860'>ACTUACION DE FIN DE CURSO</text>
+<text x='10' y='1880'>ACTUACIÓN DE BAILE</text>
+<text x='10' y='1900'>EXHIBICION DE BAILE</text>
+<text x='10' y='1920'>OBRA DE TEATRO UNHA CAIXA TOLA</text>
+<text x='10' y='1940'>TEATRO BERCE EN FAMILIA</text>
+<text x='10' y='1960'>TEATRO ESTEPARIO</text>
+<text x='10' y='1980'>SORTEO CAMPAÑA NADAL</text>
+<text x='10' y='2000'>ESPECTACULO GRUPO XAMARAINAS</text>
+<text x='10' y='2020'>ESPECTACULO  MUSICAL INFANTIL</text>
+<text x='10' y='2040'>FIESTA FIN DE CURSO</text>
+<text x='10' y='2060'>FESTIVAL DE DANZA VALERIA ANAI</text>
+<text x='10' y='2080'>FESTIVAL BAILE</text>
+<text x='10' y='2100'>FESTIVAL DE BAILE COLEXIOS</text>
+<text x='10' y='2120'>EXHIBICION DE BAILE DIANA</text>
+<text x='10' y='2140'>FESTIVAL FIN DE CURSO ACADEMIA COMPÁS</text>
+<text x='10' y='2160'>FESTIVAL PARROQUIA DAS NEVES E SAN IGNACIO</text>
+<text x='10' y='2180'>ESPECTACULO MUSICAL INFANTIL</text>
+<text x='10' y='2200'>OBRA DE TEATRO: UNHA MORTE LANZAL</text>
+<text x='10' y='2220'>PROXECCIÓN LONGOMETRAXE A PEGADA DOS AVÓS</text>
+<text x='10' y='2240'>REPRESENTACIÓN Y SORTEO LOTE LIBROS</text>
+<text x='10' y='2260'>DESFILE ANUAL DE MODA CURSO PATRONAXE</text>
+<text x='10' y='2280'>REPRESENTACIÓN DA OBRA UNDERGROUND</text>
+<text x='10' y='2300'>FESTIVAL BAILE/DANZA</text>
+<text x='10' y='2320'>ACTUACIÓN DE BAILE SASHA FEELS</text>
+<text x='10' y='2340'>CONCIERTO MELÓDICO LÍRICO MUSICA FUSIÓN</text>
+<text x='10' y='2360'>TEATRO MARIDAXE</text>
+<text x='10' y='2380'>INAGURACIÓN II OLIMPIADA TEIS-2015</text>
+<text x='10' y='2400'>FESTA ACTIVIDADES EXTRAESCOLARES</text>
+<text x='10' y='2420'>ESTRENO OPERA</text>
+<text x='10' y='2440'>ENSAIO DESFILE PATRONAXE FIN DE CURSO</text>
+<text x='10' y='2460'>OBRA DE TEATRO</text>
+<text x='10' y='2480'>FESTIVAL POSSUMUS</text>
+<text x='10' y='2500'>FESTIVAL NADAL</text>
+<text x='10' y='2520'>FESTIVAL DANZA ASOCIACIJN GONDOMAR</text>
+<text x='10' y='2540'>CURSO DE GUITARRA ELÉCTRICA</text>
+<text x='10' y='2560'>CURSO DE GUITARRA ESPAÑOLA</text>
+<text x='10' y='2580'>COLEXIO SAN FERMÍN VIGO</text>
+<text x='10' y='2600'>FUNCIÓN DE DANZA CONTEMPORANEA</text>
+<text x='10' y='2620'>MARSTERCLASS DE FOTOGRAFÍA SOCIAL</text>
+<text x='10' y='2640'>TEATRO ACTUACIÓN DE LA TROPA DE TRAPO ANTIA WAMBA E OR RITMO DO CAMIÑO</text>
+<text x='10' y='2660'>OBRA DE TEATRO O CONTO MÁXICO</text>
+<text x='10' y='2680'>ACTUACIÓN NENOS</text>
+<text x='10' y='2700'>ACTUACIÓN BAILE MODERNO</text>
+<text x='10' y='2720'>ESTRENO DOCUMENTAL LADAKH EL PEQUEÑO TIBET</text>
+<text x='10' y='2740'>ESPECTÁCULO MUSICAL:  A ÚLTIMA VERBENA</text>
+<text x='10' y='2760'>FUNCIÓN TANGO POR AFRICA</text>
+<text x='10' y='2780'>FESTIVAL  SOLIDARIO DE DANZA</text>
+<text x='10' y='2800'>FESTIVAL DE DANZA</text>
+<text x='10' y='2820'>FESTIVAL FIN DE CURSO AULA COMPÁS</text>
+<text x='10' y='2840'>FESTVAL BAILE MODERNO</text>
+<text x='10' y='2860'>CONMEMORACION DO DIA DE ANDALUCIA</text>
+<text x='10' y='2880'>RECITAL POÉTICO</text>
+<text x='10' y='2900'>CONCERTO BENÉFICOORQUESTRA XOVE VIGO 430</text>
+<text x='10' y='2920' style='fill:red;'>EXPOSICIÓN</text>
+<text x='10' y='2940' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='2960'>EXPOSICIÓN DE PINTURA, ACUARELA E LAPIZ: SÍNDROME DE COPÉRNICO</text>
+<text x='10' y='2980'>EXPOSICIÓN DE PINTURA OLEOS</text>
+<text x='10' y='3000'>EXPOSICIÓN DE TRABALLOS VOGALÍA MULLER</text>
+<text x='10' y='3020'>EXPOSICIÓN PRIMER CAMIÑO DE SANTIAGO DA PINTURA</text>
+<text x='10' y='3040' style='fill:red;'>FÍSICA</text>
+<text x='10' y='3060' style='fill:red;'>ADULTOS</text>
+<text x='10' y='3080'>ENTRENAMENTO DE FUTBOL EQUIPO OS MUIÑOS E VARIOS</text>
+<text x='10' y='3100'>DANZA BAILE LATINO</text>
+<text x='10' y='3120'>DANZAS DO MUNDO</text>
+<text x='10' y='3140'>PILATES</text>
+<text x='10' y='3160'>CACHIBOL</text>
+<text x='10' y='3180'>XIMNASIA MAIORES</text>
+<text x='10' y='3200'>XIMNASIA MANTEMENTO (ADULTOS)</text>
+<text x='10' y='3220'>ZUMBA ADULTOS</text>
+<text x='10' y='3240'>AEROBIC E STEP ADULTOS</text>
+<text x='10' y='3260'>STEP ADULTOS</text>
+<text x='10' y='3280'> TONIFICACIÓN E BAILE</text>
+<text x='10' y='3300'> YOGUILATES (YOGA + PILATES)</text>
+<text x='10' y='3320'>DANZA ORIENTAL</text>
+<text x='10' y='3340'>GAP (GLÚTEOS, ABDOMEN E PERNAS)</text>
+<text x='10' y='3360'>DE IOGA</text>
+<text x='10' y='3380'>PILATES (MAÑÁS)</text>
+<text x='10' y='3400'>PILATES (TARDES)</text>
+<text x='10' y='3420'>REEDUCACIÓN POSTURAL (PILATES BIOMECÁNICO)</text>
+<text x='10' y='3440'>SEVILLANAS</text>
+<text x='10' y='3460'>TAICHI E CHIKUNG ADULTOS</text>
+<text x='10' y='3480'>IOGA</text>
+<text x='10' y='3500'>TALLER DE RELAXACIÓN E MEDITACIÓN</text>
+<text x='10' y='3520'>DEFENSA PERSOAL FEMENINO</text>
+<text x='10' y='3540'>BODY PUM CON BANDA ELÁSTICA</text>
+<text x='10' y='3560'>FÚTBOL SALA SEN ÁRBITRO</text>
+<text x='10' y='3580'>DANZA ACROBÁTICA AÉREA</text>
+<text x='10' y='3600'>AVELLENTAMENTO ACTIVO DANZAS DO MUNDO</text>
+<text x='10' y='3620'>AVELLENTAMENTO ACTIVO MEMORIA ACTIVA</text>
+<text x='10' y='3640'>DINÁMICAS EN GRUPO E XOGOS TRADICIONAIS MAIORES</text>
+<text x='10' y='3660'>ENTRENAMENTO FUTBOL ALKHELAIFI</text>
+<text x='10' y='3680'>DEFENSA PERSOAL FEMENINA</text>
+<text x='10' y='3700'>INICIACIÓN AO RUGBY</text>
+<text x='10' y='3720'>TALLER DE MEDITACIÓN</text>
+<text x='10' y='3740'>XIMNASIA PARA MAIORES</text>
+<text x='10' y='3760'>ENSAIO DANZA CREATIVA</text>
+<text x='10' y='3780'>AEROBIC – STEP ADULTOS ADULTOS</text>
+<text x='10' y='3800'>PILATES FITCIONES</text>
+<text x='10' y='3820'>PILATES BIOMECÁNICO</text>
+<text x='10' y='3840'>ZUMBA E PILATES FITCIONES</text>
+<text x='10' y='3860'> SEVILLANAS</text>
+<text x='10' y='3880'>TAI CHI Y CHI KUNG</text>
+<text x='10' y='3900'>ACTIVIDAD FÍSICA PARA MAIORES</text>
+<text x='10' y='3920'>ADESTRAMENTO EN GRUPOS</text>
+<text x='10' y='3940'>FÚTBOL SALA</text>
+<text x='10' y='3960'>ENSAIO ACTUACIÓN</text>
+<text x='10' y='3980'>HATHA-IOGA</text>
+<text x='10' y='4000'>EXERCICIO FÍSICO SAUDABLE</text>
+<text x='10' y='4020'>CLASES DANZA CONTEMPORANEA</text>
+<text x='10' y='4040'>OBRADOIRO DE  XOGO, CREATIVO, ESTIMULACIÓN DIRIXIDAS A BEBÉS</text>
+<text x='10' y='4060'>TÉCNICAS DE RELAXACIÓN PRESIÓN CORPORAIS E MOMENTO</text>
+<text x='10' y='4080'>XIMANASIA COA PELOTA</text>
+<text x='10' y='4100'>ENTRENAMENTO DE FÚTBOL SALA CLUB SOL IN VICTUS</text>
+<text x='10' y='4120'>CLASES DE BAILE LATINO (PARA UNA PERSONA)</text>
+<text x='10' y='4140' style='fill:red;'>CATIVOS</text>
+<text x='10' y='4160'>CAPOEIRA PARA NENOS</text>
+<text x='10' y='4180'>CURSO DE KUNG FU PARA NEN@S</text>
+<text x='10' y='4200'>ENTRENAMENTO DE FÚTBOL</text>
+<text x='10' y='4220'>PATINAXE EN LIÑA</text>
+<text x='10' y='4240'>ENTRENAMENTO BILLARDA</text>
+<text x='10' y='4260'>BAILE MODERNO PARA NEN@S</text>
+<text x='10' y='4280'>HOCKEY EN LINEA SOBRE PATINES</text>
+<text x='10' y='4300'>CLASES DE PATINAJE EN LÍNEA, INICIACIÓN A HOCKEY EN LÍNEA</text>
+<text x='10' y='4320'>TORNEO  DE TROMPOS</text>
+<text x='10' y='4340'>AEROBIC – STEP NENOS</text>
+<text x='10' y='4360'>BALLET PARA NENOS-AS</text>
+<text x='10' y='4380'>IOGA INFANTIL EN INGLÉS</text>
+<text x='10' y='4400'>CAPOEIRA NEN@S</text>
+<text x='10' y='4420'>CLASES DE PATINAJE EN LÍNEA INICIACIÓN</text>
+<text x='10' y='4440'>PATINAXE ARTÍSTICO NEN@S</text>
+<text x='10' y='4460' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='4480'>FESTA FIN DE CURSO AEROBIC E STEP MAIORES</text>
+<text x='10' y='4500'>FESTIVAL COLEXIO FRIAN TEIS</text>
+<text x='10' y='4520'>FESTIVAL DE BAILE CLUB VIGO</text>
+<text x='10' y='4540'>ENSAIO II OLIMPIADA TEIS 2015</text>
+<text x='10' y='4560'>HOCKEY SOBRE PATINES EN LÍNEA</text>
+<text x='10' y='4580'>ENSAIO ACTUACIÓN BAILE TINTUREIRA, RÍA DE VIGO E SANTO TOMÉ</text>
+<text x='10' y='4600' style='fill:red;'>FORMATIVA</text>
+<text x='10' y='4620' style='fill:red;'>ADULTOS</text>
+<text x='10' y='4640'>COCIÑA SA E DOADA</text>
+<text x='10' y='4660'>OBRADOIRO DE AYURVEDA</text>
+<text x='10' y='4680'>OBRADOIRO DE MUSICOTERAPIA  </text>
+<text x='10' y='4700'>ESCOLA DE ADULTOS</text>
+<text x='10' y='4720'>DINÁMICAS DE GRUPO</text>
+<text x='10' y='4740'>MEMORIA ADULTOS (TARDES)</text>
+<text x='10' y='4760'>COCIÑA  (ADULTOS)</text>
+<text x='10' y='4780'>MEMORIA ADULTOS (MAÑÁS)</text>
+<text x='10' y='4800'>ESTÉTICA E BELEZA</text>
+<text x='10' y='4820'>OBRADOIRO DE RELAXACIÓN E TÉCNICAS CORPORAIS</text>
+<text x='10' y='4840'> REPOSTERÍA CREATIVA</text>
+<text x='10' y='4860'>INICIACIÓN A INFORMÁTICA</text>
+<text x='10' y='4880'>OBRADOIRO DE ALFABETIZACIÓN E MEMORIA</text>
+<text x='10' y='4900'>AXILIDADE MENTAL</text>
+<text x='10' y='4920'>CORTE E CONFECCIÓN (LUNS)</text>
+<text x='10' y='4940'>CORTE E CONFECCIÓN (XOVES)</text>
+<text x='10' y='4960'>INGLÉS BÁSICO</text>
+<text x='10' y='4980'>INGLÉS PREINTERMEDIO</text>
+<text x='10' y='5000'>INICIACIÓN A INTERNET</text>
+<text x='10' y='5020'>CURSO DE EDUCACIÓN BÁSICA</text>
+<text x='10' y='5040'> INICIACIÓN Á REPOSTERÍA CREATIVA</text>
+<text x='10' y='5060'>MEMORIA</text>
+<text x='10' y='5080'>OBRADOIRO DE HISTORIA DA ARTE</text>
+<text x='10' y='5100'>COSTURA BÁSICA DE SUERVIVENCIA</text>
+<text x='10' y='5120'>CURSO DE FORMACIÓN EN TERAPIA FAMILIAR BREVE</text>
+<text x='10' y='5140'>CURSO DE PERCUSIÓN RITMO AFRICANO E CUBANO</text>
+<text x='10' y='5160'>CURSO DE ALEMÁN BÁSICO</text>
+<text x='10' y='5180'>INICIACIÓN O FRANCÉS</text>
+<text x='10' y='5200'>CLASES PREPARACIÓN PARA A  E.S.O.</text>
+<text x='10' y='5220'>AULA VIVA DE MAIORES</text>
+<text x='10' y='5240'>CURSO DE SERIGRAFÍA</text>
+<text x='10' y='5260'>OBRADOIRO ANIMADO DE HISTORIA E ARTE</text>
+<text x='10' y='5280'>COCIÑA</text>
+<text x='10' y='5300'>COCIÑA SAUDABLE, SINXELA E RAPIDA</text>
+<text x='10' y='5320'>CURSO DE VOLUNTARIADO MEDIOAMBIENTAL</text>
+<text x='10' y='5340'>OBRADOIRO DE CRECEMENTO PERSOAL</text>
+<text x='10' y='5360'>CURSO DE INICIACION A INTERNET</text>
+<text x='10' y='5380'>CURSO ALEMAN BASICO ADULTOS</text>
+<text x='10' y='5400'>INTENET AVANZADO</text>
+<text x='10' y='5420'>DINAMICA MENTAL</text>
+<text x='10' y='5440'>CURSO DE POTENCIACION</text>
+<text x='10' y='5460'>INICIACIÓN Á INFORMÁTICA</text>
+<text x='10' y='5480'>CURSO INTERACCIÓN DIRECTORES/ACTORES</text>
+<text x='10' y='5500'>INICIACIÓN INFORMÁTICA</text>
+<text x='10' y='5520'>TALLER DE MONÓLOGOS</text>
+<text x='10' y='5540'>PERCUSIÓN TRADICIONAL E CAIXÓN FLAMENCO</text>
+<text x='10' y='5560'>TALLER: MELLORA A TUA PRODUCTIVIDADE</text>
+<text x='10' y='5580'>TALLER: TALLER MELLORA A TUA PRODUCTIVIDADE</text>
+<text x='10' y='5600'>COCIÑA EN INGLÉS</text>
+<text x='10' y='5620'>COCIÑA HINDÚ, VEGANA E VEXETARIANA</text>
+<text x='10' y='5640'> INGLÉS COMUNICATIVO</text>
+<text x='10' y='5660'>XORNADAS DE FORMACIÓN SOBRE REPRESENTACIÓN ESTUDIANTIL</text>
+<text x='10' y='5680'>CLASES PREPARACIÓN PARA A E.S.O.</text>
+<text x='10' y='5700'>INGLÉS SUPERVIVENZA PARA VIAXAR (ADULTOS)</text>
+<text x='10' y='5720'>SESIÓN FORMATIVA ADULTOS</text>
+<text x='10' y='5740'>CURSO ALFABETIZACIÓN DIXITAL INTERMEDIO (PARA MAIORES)</text>
+<text x='10' y='5760'>LINGUA DE SIGNOS</text>
+<text x='10' y='5780'>ALFABETIZACIÓN DIXITAL INTERMEDIO (PARA MAIORES)</text>
+<text x='10' y='5800'>MARCA PERSOAL 2.0.</text>
+<text x='10' y='5820'>CURSO COMUNICATE</text>
+<text x='10' y='5840'>AXENTES ACTIVOS DE CONSUMO</text>
+<text x='10' y='5860'>CURSO ETF TÉCNICA DE LIBERACIÓN EMOCIONAL</text>
+<text x='10' y='5880'> ALFABETIZACIÓN DIXITAL PARA MAIORES</text>
+<text x='10' y='5900'> INFORMÁTICA</text>
+<text x='10' y='5920'> INFORMÁTICA PORTÁTILES</text>
+<text x='10' y='5940'>INGLÉS INTERMEDIO</text>
+<text x='10' y='5960'>COACHING</text>
+<text x='10' y='5980'>CURSO DE LECTURA DE ETIQUETAS ALIMENTARIAS</text>
+<text x='10' y='6000'>RECETAS VERANIEGAS</text>
+<text x='10' y='6020'>NUTRICIÓN E RECEITAS</text>
+<text x='10' y='6040'>CHARLA SOBRE TERAPIAS ALTERNATIVAS</text>
+<text x='10' y='6060'>CURSO DE COCIÑA</text>
+<text x='10' y='6080'>ENTRENAMENTO DE MEMORIA</text>
+<text x='10' y='6100'>CURSO FERRAMENTAS DO COACHING APLICADAS NA ATENCIÓN SOCIAL INDIVIDUAL</text>
+<text x='10' y='6120'>CLASES DE PREPARACIÓN ESO</text>
+<text x='10' y='6140'>PSICOESCRITURA</text>
+<text x='10' y='6160'>OBRADOIRO Hª DO PAPEL</text>
+<text x='10' y='6180'>TRATAMENTO DE TEXTO E FOLLA DE CÁLCULO</text>
+<text x='10' y='6200'>EDUCACIÓN VIAL</text>
+<text x='10' y='6220'>CLASES DANZA CONTEMPORANEA</text>
+<text x='10' y='6240'>ENTREVISTA A FAMILIARES E ASOCIADOS</text>
+<text x='10' y='6260'>COCIÑA VEXETARIANA VEGANA</text>
+<text x='10' y='6280'>CURSO DE EDUCACIÓN BÁSICA DE PERSOAS ADULTAS</text>
+<text x='10' y='6300'>REUNIÓNS INFORMATIVAS</text>
+<text x='10' y='6320'>CLASES DE INFORMÁTICA</text>
+<text x='10' y='6340'>CURSO DE SEXUALIDADE, EMOCIÓN E ERÓTICA</text>
+<text x='10' y='6360'>EXPRESIÓN  CORPORAL, RELAXACIÓN E MOVEMENTO</text>
+<text x='10' y='6380'>CURSO: LINNGUA DE SIGNOS</text>
+<text x='10' y='6400'>TALLER DE COCIÑA PARA USUARIOS CENTRO DE DÍA</text>
+<text x='10' y='6420'>CURSO PERCUSIÓN TRADICIONAL E CAIXÓN FLAMENCO, DJEMBE E BATERÍA</text>
+<text x='10' y='6440'>CLASES DE ALEMAN BÁSICO</text>
+<text x='10' y='6460'>OBRADOIRO TÉCNICAS DE LIBERACIÓN EMOCIONAL</text>
+<text x='10' y='6480'>COCIÑA VEXETARIANA (CON ALGAS)</text>
+<text x='10' y='6500'>CURSO DE INFORMÁTICA</text>
+<text x='10' y='6520'>CLASES DE PINTURA E DEBUXO</text>
+<text x='10' y='6540'>CORAL POLIFÓNICA</text>
+<text x='10' y='6560'>CURSO PATRONAXE</text>
+<text x='10' y='6580'>TALLER DE FOTOGRAFÍA</text>
+<text x='10' y='6600'>COCIÑA BÁSICA E MODERNA</text>
+<text x='10' y='6620' style='fill:red;'>CATIVOS</text>
+<text x='10' y='6640'> COCIÑA PARA NEN@S</text>
+<text x='10' y='6660'>LUDOTECA</text>
+<text x='10' y='6680'>REFORZO ESCOLAR INGLÉS PARA NEN@S</text>
+<text x='10' y='6700'>INFORMÁTICA PARA NEN@S</text>
+<text x='10' y='6720'>CURSO DE MAXIA PARA RAPACES</text>
+<text x='10' y='6740'>ANIMACIÓN A LECTURA E TÉCNICAS DE ESTUDO</text>
+<text x='10' y='6760'>COCIÑA DO NADAL</text>
+<text x='10' y='6780'>COCIÑA ENTROIDO</text>
+<text x='10' y='6800'>COCIÑA EN INGLÉS PARA NENOS</text>
+<text x='10' y='6820'>INGLÉS CONVERSA, XOGO E CANCIÓNS (NENOS)</text>
+<text x='10' y='6840'>INGLÉS NENOS REFORZO E  SPEAKING</text>
+<text x='10' y='6860'>COCIÑA PARA NENOS</text>
+<text x='10' y='6880'>CURSO DE EDUCACIÓN EMOCIONAL PARA NENOS</text>
+<text x='10' y='6900'>KIDSBRAIN (CÁLCULO MENTAL CO ÁBACO EN INGLES)</text>
+<text x='10' y='6920'>ROBÓTICA EDUCATÍVA</text>
+<text x='10' y='6940'>ROBÓTICA CREATIVA</text>
+<text x='10' y='6960'>OBRADOIRO DE CINE DE ANIMACIÓN PARA NEN@S</text>
+<text x='10' y='6980'>INICIACIÓN Á FOTOGRAFÍA PARA NEN@S</text>
+<text x='10' y='7000'>CLASES DE TEATRO PARA NENOS</text>
+<text x='10' y='7020'>COCIÑA PARA CATIVOS</text>
+<text x='10' y='7040'>INGLÉS NENOS</text>
+<text x='10' y='7060' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='7080'>CLASES DE GUITARRA</text>
+<text x='10' y='7100'>PROBA DE VÍDEO HOMENAXE A RÍA DE VIGO</text>
+<text x='10' y='7120'>CURSO AGASALLOS PARA NADAL</text>
+<text x='10' y='7140'> GUITARRA</text>
+<text x='10' y='7160'>CLASES DE MANUALIDADES</text>
+<text x='10' y='7180'>CLASES DE COCIÑA</text>
+<text x='10' y='7200'> MAXASE, RELAXACIÓN E XOGOS CON BEBES E FAMILIAS</text>
+<text x='10' y='7220' style='fill:red;'>MANUAIS</text>
+<text x='10' y='7240' style='fill:red;'>ADULTOS</text>
+<text x='10' y='7260'>OBRADOIRO DE ARTESANÍA</text>
+<text x='10' y='7280'>ELABORACIÓN DE ACCESORIOS PARA O FOGAR</text>
+<text x='10' y='7300'>ELABORACIÓN DE XABÓNS</text>
+<text x='10' y='7320'>ELABORACIÓN DE CREMAS</text>
+<text x='10' y='7340'>OBRADOIROS DE FIELTRO</text>
+<text x='10' y='7360'>PATRONAXE E MODA</text>
+<text x='10' y='7380'>ARTE FLORAL</text>
+<text x='10' y='7400'>PATRONAXE MODA E CONFECCIÓN</text>
+<text x='10' y='7420'>PATRONAXE TÉCNICO E INDUSTRIAL</text>
+<text x='10' y='7440'>CORTE Y CONFECCIÓN</text>
+<text x='10' y='7460' style='fill:red;'>CATIVOS</text>
+<text x='10' y='7480'>ART ATTACK</text>
+<text x='10' y='7500'>CURSO DE SCRAPBOOKING</text>
+<text x='10' y='7520'>OBRADOIRO DE POSTAIS DE NADAL</text>
+<text x='10' y='7540'>MANUALIDADES PARA NENOS</text>
+<text x='10' y='7560'>CLASES DE COCIÑA</text>
+<text x='10' y='7580'>CLASES DE MANUALIDADES</text>
+<text x='10' y='7600' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='7620'>OBRADOIRO DE CERÁMICA</text>
+<text x='10' y='7640' style='fill:red;'>SOCIAL</text>
+<text x='10' y='7660' style='fill:red;'>ADULTOS</text>
+<text x='10' y='7680'>XUNTANZA PRODUCTORA DREAMSTEEM</text>
+<text x='10' y='7700'>COÑECENDOME</text>
+<text x='10' y='7720'>CHARLA ALIMENTACIÓN E NUTRICIÓN</text>
+<text x='10' y='7740'>CONFERENCIA</text>
+<text x='10' y='7760'>REUNIÓN ASAMBLEA GENERAL 2014</text>
+<text x='10' y='7780'>CONFERENCIA  J. AKERMAN</text>
+<text x='10' y='7800'>REUNIÓN ASOCIACIÓN DE NIXERIANOS</text>
+<text x='10' y='7820'>PSICOLOGÍA / PSICOTERAPIA</text>
+<text x='10' y='7840'>CHARLA SOBRE ESTUDOS METAFÍSICOS, LEIS UNIVERSAIS, LEI DE ATRACCIÓN, CURSO DE ÁNGELES O PODER DO PENSAMENTO</text>
+<text x='10' y='7860'>REUNIÓN ORDINARIA MENSUAL</text>
+<text x='10' y='7880'>CURSO DE IDENTIDADE E AUTOESTIMA</text>
+<text x='10' y='7900'>REUNIÓN ASAMBLEA AFECTADOS PREFERENTES</text>
+<text x='10' y='7920'>REUNIÓN DIRECTIVA</text>
+<text x='10' y='7940'>XUNTANZA ASOCIACIÓN</text>
+<text x='10' y='7960'>ASISTENCIA PSICOLÓXICA</text>
+<text x='10' y='7980'>CONFERENCIA DE INICIACIÓN Á MEDITACIÓN</text>
+<text x='10' y='8000'>TELECOMUNICACIONES</text>
+<text x='10' y='8020'>ACTO DESPEDIDA POR XUBILACIÓN DUN COMPAÑEIRO</text>
+<text x='10' y='8040'>DESENROLO ÁMBITO GONDOSENDE</text>
+<text x='10' y='8060'>CHARLA INFORMÁTICA DE TERAPIAS EMOCIONAIS ATRÉVETE</text>
+<text x='10' y='8080'>REUNIÓN COLECTIVO SOLICITANTE</text>
+<text x='10' y='8100'>APRENDE A MEDITAR, UNHA EXPERIENCIA PERSOAL</text>
+<text x='10' y='8120'>XUNTA XERAL ORDINARIA</text>
+<text x='10' y='8140'>REUNIÓN DE FINCAS</text>
+<text x='10' y='8160'>ASAMBLEA FUNDACIONAL</text>
+<text x='10' y='8180'>REUNIÓN COS PROPIETARIOS E EQUIPO REDACTOR</text>
+<text x='10' y='8200'>CHARLA SOBRE ALIMENTACIÓN CORRECTA</text>
+<text x='10' y='8220'>XORNADAS DE CONCIENCIACIÓN EN SEGURIDADE VIARIA</text>
+<text x='10' y='8240'>CHARLA INFORMATIVA EMIGRANTES RETORNADOS RECLAMACIÓN FACENDA</text>
+<text x='10' y='8260'>REUNION XUNTA DIRECTIVA TEIS</text>
+<text x='10' y='8280'>ENTREVISTA A FAMILIARES</text>
+<text x='10' y='8300'>TALLER DE SEGURIDADE VIAL</text>
+<text x='10' y='8320'>CELEBRACIÓN DEL DIA DE ANDALUCÍA</text>
+<text x='10' y='8340'>CONFERENCIA DESENROLO PERSOAL VENCE OS TEUS MEDOS</text>
+<text x='10' y='8360'>XUNTANZA DE REPRESENTACIÓN SINDICAL</text>
+<text x='10' y='8380'>OBRADOIRO DE SOLO PÉLVICO</text>
+<text x='10' y='8400'>REUNION DE ASAMBLEA RECICLADO ACEITES DOMESTICOS</text>
+<text x='10' y='8420'>ASAMBLEA ORDINARIA DA COOPERATIVA ÁRBORE</text>
+<text x='10' y='8440'>XUNTANZA-CONFERENCIA</text>
+<text x='10' y='8460'>DESENROLO DO AMBITO DO PGOU</text>
+<text x='10' y='8480'>REUNION PRODUCTORA</text>
+<text x='10' y='8500'>REUNIÓN ASOCIACIÓN CULTURAL</text>
+<text x='10' y='8520'>REUNIÓN DE PROPIETARIOS DE DOUTOR CORBAL 152-158</text>
+<text x='10' y='8540'>CHARLA-COLOQUIO BAJAR PESO</text>
+<text x='10' y='8560'>CONFERENCIA EL AMOR EN LA TIERRA</text>
+<text x='10' y='8580'>CHARLA-PRESENTACIÓN LIBRO EL DESPERTAR A TRAVÉS DEL CANCER</text>
+<text x='10' y='8600'>ENTREVISTA E PSICOEDUCACION</text>
+<text x='10' y='8620'>CHARLA SOBRE AS PENSIONS</text>
+<text x='10' y='8640'>ASAMBLEA INFORMATIVA DELEGADOS DEL METAL</text>
+<text x='10' y='8660'>CONFERENCIA AUTOCOÑECEMENTO E AUTOAXUDA</text>
+<text x='10' y='8680'>ENTREVISTAS E PSICOEDUCACIÓN</text>
+<text x='10' y='8700'>PROXECCIÓN DOCUMENTAL JOSÉ GIL FOTOGRAFO PIONEIRO DO CINE</text>
+<text x='10' y='8720'>XUNTANZA FAMILIAS ASOCIACIÓN SEMENTE</text>
+<text x='10' y='8740'>EDUCAR PARA CRECER</text>
+<text x='10' y='8760'>O MAL TEMPO BOA CARA</text>
+<text x='10' y='8780'>REUNIÓNS FILOSÓFICAS</text>
+<text x='10' y='8800'>PSICOEDUCACIÓN /ENTREVISTAS</text>
+<text x='10' y='8820'>XORNADA ESPIRITA</text>
+<text x='10' y='8840'>30 ANOS FOLGA XERAL</text>
+<text x='10' y='8860'>REUNIÓN DESARROLLO APR A-5-06</text>
+<text x='10' y='8880'>XUNTANZA ORDINARIA COMUNIDADE DE PROPIETARIOS</text>
+<text x='10' y='8900'>XUNTANZA ASOCIACIÓN SEMENTE VIGO</text>
+<text x='10' y='8920'>REUNIÓN AFECTADOS PERI POU</text>
+<text x='10' y='8940'>REUNIÓN ORDINARIA DR.CORBAL 152-158</text>
+<text x='10' y='8960'>CONFERENCIA MEDITACIÓN, UNHA EXPERIENCIA PERSOAL</text>
+<text x='10' y='8980'>ASAMBLEA ANUAL</text>
+<text x='10' y='9000'>PSCOEDUCACIÓN PARA AFECTADOS</text>
+<text x='10' y='9020'>ASAMBLEA DE SOCIOS</text>
+<text x='10' y='9040'>ASAMBLEA XERAL DE PERSOAS SOCIAS</text>
+<text x='10' y='9060'>MICROXORNADA</text>
+<text x='10' y='9080'>ASAMBLEA INFORMATIVA SOBRE PARTICIPACIÓN VECIÑAL</text>
+<text x='10' y='9100'>ASAMBLEA MENSUAL DE AFECTADOS</text>
+<text x='10' y='9120'>CHARLA BIONEUROEMOCIÓN</text>
+<text x='10' y='9140'>ASAMBLEA XERAL</text>
+<text x='10' y='9160'>ENTREVISTAS A FAMILIARES E AFECTADOS</text>
+<text x='10' y='9180'>CONFERENCIA IOGA TIBETANO</text>
+<text x='10' y='9200'>REUNIÓN INFORMÁTIVA</text>
+<text x='10' y='9220'>MERENDOLA -EDUCACIÓN BÁSICA ADULTOS</text>
+<text x='10' y='9240'>REUNIÓN DE SOCIOS</text>
+<text x='10' y='9260'>JUNTA GENERAL EXTRAORDIANRIA</text>
+<text x='10' y='9280'>CINETERAPIA</text>
+<text x='10' y='9300'>PSICOEDUCACIÓN AFECTADOS</text>
+<text x='10' y='9320'>REUNIÓN XUNTA DIRECTIVA</text>
+<text x='10' y='9340'>REUNIÓN PSX SERGAS</text>
+<text x='10' y='9360'>CASTING SERIE INTERNET</text>
+<text x='10' y='9380'>ASAMBLEA NACIONAL</text>
+<text x='10' y='9400'>ENTREVISTA DE SEGUIMENTO A FAMILIAS E AFECTADOS</text>
+<text x='10' y='9420'>PSICOEDUCACIÓN PARA AFECTADOS/AS</text>
+<text x='10' y='9440'>ASAMBLEA XERAL 2015</text>
+<text x='10' y='9460'>REUNIÓN E PLANIFICACIÓN DO PLAN DE RODAXE</text>
+<text x='10' y='9480'>PRESENTACIÓN LIBRO EFECTOS DAS RADIACIÓN ELECTROMAGNÉTICAS E COMO PREVENIRLAS</text>
+<text x='10' y='9500'>PREPARATIVOS E ENSAIO XERAL</text>
+<text x='10' y='9520'>REUNIÓN JUNTA DIRECTIVA</text>
+<text x='10' y='9540'>MEIDITACIÓN UNHA EXPERIENCIA PERSOAL</text>
+<text x='10' y='9560'>CHARLA FILOSOFICA PENSAMIENTO POSITIVO</text>
+<text x='10' y='9580'>TALLER TP</text>
+<text x='10' y='9600'>REUNIÓN DE  PROPIETAROS APR GONDOSENDE</text>
+<text x='10' y='9620'>JUBILOTECA</text>
+<text x='10' y='9640'>VIVIR EN POSITIVO</text>
+<text x='10' y='9660'>REUNIÓN DE JUNTA DIRECTIVA</text>
+<text x='10' y='9680'>REUNIÓN DE PROPIETARIOS</text>
+<text x='10' y='9700'>DEIXAR MATERIAL PARA ACTUACIÓN FIN DE CURSO</text>
+<text x='10' y='9720'>REUNIÓN INFORMATIVA SOCIOS</text>
+<text x='10' y='9740'>CONFERENCIA MITOLOXÍA GREGA</text>
+<text x='10' y='9760'>CONFERENCIA BIONEUROEMOCIÓN</text>
+<text x='10' y='9780'>TERAPIA DE CRECEMENTO PERSOAL, LÓXICA CONVERXENTE</text>
+<text x='10' y='9800'>CAMPAÑA EVANXÉLICA CONTRA O RACISMO E A XENOFÓBIA</text>
+<text x='10' y='9820'>REUNIÓN JUNTA DIIRECTIVA</text>
+<text x='10' y='9840'>ENCONTRO SINDICAL: XUNTANZA TEMAS DE ACTUALIDADE</text>
+<text x='10' y='9860'>CHARLA INFORMÁTIVA SOBRE A MARCHA DA DISNIDADE</text>
+<text x='10' y='9880'>TALLER PSICOEDUCACIÓN AFECTADOS</text>
+<text x='10' y='9900'>ENTREVISTA DE SEGUEMENTO A FAMILIARES E AFECTADOS</text>
+<text x='10' y='9920'>CONFERENCIA ESPIRITUALIDAD Y ALEGRUA</text>
+<text x='10' y='9940'>PREPARACIÓN DE ESCERNARIO E ENSAIO DO DESFILE MODA DO CURSO DE PATRONAXE 2014-2015</text>
+<text x='10' y='9960'>ENSAIO PARTICIPANTES</text>
+<text x='10' y='9980'>ENSAIO VIDEOCONFERENCIA A ESMORGA</text>
+<text x='10' y='10000'>ENSAIO ARTE PINGUE</text>
+<text x='10' y='10020'>ENSAIOS PREVIOS A FUNCIÓN E GARDA ROUPA</text>
+<text x='10' y='10040'>ENSAIO PREVIOS A FUNCION E GARDA ROUPA</text>
+<text x='10' y='10060'>EDUCACIÓN VIAL</text>
+<text x='10' y='10080'>ENTREVISTAS FAMILIARES PSICOEDUCACION</text>
+<text x='10' y='10100'>ASAMBLEA GENERAL ORDINARIA DE SOCIOS</text>
+<text x='10' y='10120'>MEMORIA ACTIVA</text>
+<text x='10' y='10140'>PROXECCIÓN AVELLANTAMENTO ACTIVO</text>
+<text x='10' y='10160'>PINCHOS VOLUNTARI@S</text>
+<text x='10' y='10180'>MERENDA COMPAÑEIR@S CLASES DE EDUCACIÓN BÁSICA PARA ADULTOS (ASOCIACIÓN MULLERES PROGRESISTAS)</text>
+<text x='10' y='10200'>REUNIÓN XUNTA DIRECTIVA ASOCIACIÓN COMERCIANTES TEIS</text>
+<text x='10' y='10220'>REUNIÓN PROCEDIMIENTO PENAL EXTRABALLADORES HERMANOS RDGUEZ</text>
+<text x='10' y='10240' style='fill:red;'>CATIVOS</text>
+<text x='10' y='10260'>BAILE MODERNO PARA NEN@S FESTIVAL</text>
+<text x='10' y='10280'>FESTA DE CUMPREANOS ACOMPAÑADO DE XOGOS PARA NENOS (CUCAÑAS)</text>
+<text x='10' y='10300'>ENTREGA DIPLOMAS</text>
+<text x='10' y='10320'>LUDOTECA DE LAS EMOCIONES</text>
+<text x='10' y='10340'>FESTIVAL DE FIN DE CURSO</text>
+<text x='10' y='10360'>ENSAIO FESTIVAL ESCOLA INFANTIL PICARIÑOS</text>
+<text x='10' y='10380'>FESTIVAL FIN DE CURSO ESCOLA INFANTIL PICARIÑOS</text>
+<text x='10' y='10400'>VISITA GUIADA INSTALACIÓN OMD TEIS</text>
+<text x='10' y='10420'>REPRESENTACIÓN PELÍCULA GRUPO TEGRIÑA</text>
+<text x='10' y='10440'>PROXECCIÓN PELÍCULA  GRUPO FAMILIAS TEGRIÑA</text>
+<text x='10' y='10460'>MERENDA GRUPO FAMILIAS TEGRIÑA</text>
+<text x='10' y='10480' style='fill:red;'>TODOS OS PÚBLICOS</text>
+<text x='10' y='10500'>HOMENAXE A RÍA DE VIGO</text>
+<text x='10' y='10520'>FESTA DO VECIÑO</text>
+<text x='10' y='10540'>FESTIVAL NAVIDAD ENSAIOS</text>
+<text x='10' y='10560'>PRESENTACION LIBRO PESCANOVA</text>
+<text x='10' y='10580'>ESTREO DA OBRA - COLABORA TEATRO LAMEIRO MATAMÁ</text>
+<text x='10' y='10600'>FUNCIÓN DE DANZA CONTEMPORANEA</text>
+<text x='10' y='10620'>FESTIVAL 2015 – VIGO BAILANDO</text>
+<text x='10' y='10640'>PREPARATIVOS E FESTIVAL DE FIN DE CURSO</text>
+<text x='10' y='10660'>GRADUACIÓN INFANTIL</text>
+<text x='10' y='10680'>ACTUACIÓN SERÁNDA CARBALLEIRA DA GUÍA</text>
+<text x='10' y='10700'>ACTUACIÓN BAILE TINTUREIRA,RÍA DE VIGO E SANTO TOMÉ</text>
+<text x='10' y='10720'>MERENDA PARA PARTICIPANTES DAS OBRAS DE TEATRO</text>
+<text x='10' y='10740'>VARIAS OBRAS DE TEATRO E CONTACONTOS FAMILIAR</text>
+<text x='10' y='10760'>FESTA FIN DE CURSO ESCOLA INFANTIL LOS OLMOS</text>
+<text x='10' y='10780'>DESFILE MODA DO CURSO DE PATRONAXE 2014-2015</text>
+<text x='10' y='10800'>FESTIVAL  COLEXIOS E CLUBE</text>
+<text x='10' y='10820'>FESTIVAL COLEXIOS E CLUBE</text>
+<text x='10' y='10840'>MARATÓN SOLIDARIO DE DANZA</text>
+</svg>

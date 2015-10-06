@@ -427,6 +427,12 @@ hr.slim {
 .no-margin {
   margin: 0;
 }
+.p-b-0{
+  padding-bottom: 0px !important;
+}
+.m-b-0{
+  margin-bottom: 0px !important;
+}
 /* 04. Tables
    ---------------------------------------------------------------------------*/
 .table {
@@ -2322,3 +2328,11 @@ label.error {
   border-top-right-radius:0px !important;
   border-bottom-right-radius:0px !important;
 }
+
+.margin-0{
+  margin:0px;
+}
+.m-t-5{margin-top:5px}
+.m-b-5{margin-bottom:5px}
+.m-l-5{margin-left:5px}
+.m-r-5{margin-right:5px}

@@ -13,7 +13,7 @@ function init_page(){
 
   $("#form-add-comment").validate({
     rules:{
-      content:{required:true},
+      content:{required:true}
     },
     submitHandler:function(form){
       $("#form-add-comment-display>.form-display").addClass("hidden");
@@ -21,6 +21,19 @@ function init_page(){
       add_comment();
     }
   });
+
+  $("#form-report-comment").validate({
+    rules:{
+      comment_key:{required:true},
+      report_option:{required:true}
+    },
+    submitHandler:function(form){
+      $("#form-report-comment-display>.visible-init").addClass("hidden");
+      $("#form-report-comment-display>.visible-loading").removeClass("hidden");
+      report_comment($("#form-report-comment #comment_key").val(),$("#form-report-comment #report_option").val());
+    }
+  });
+
 
   function reset_form(){
     $(".rating-input #1").html("<i class='fa fa-star text-primary'></i>");
@@ -33,6 +46,37 @@ function init_page(){
     $("#add_comment").removeClass("in");
     $("#add_comment_button").addClass("active");
     $("#add_comment_button").addClass("in");
+  }
+
+  function report_comment($_comment_key,$_report_option){
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: $_SERVER_PATH+"models/comments/model.php",
+      data: {
+        "action":"report_comment",
+        "device_key":localStorage.device_key,
+        "comment_key":$_comment_key,
+        "report_option":$_report_option,
+        "system":"web",
+        "version":"1.0"
+      },
+      error: function(data, textStatus, jqXHR) {
+        $("#form-report-comment-display>.visible-loading").addClass("hidden");
+        $("#form-report-comment-display>.visible-error").removeClass("hidden");
+      },
+      success: function(response) {
+        if(response.result){
+          list_comments();
+          $("#form-report-comment-display>.visible-loading").addClass("hidden");
+          $("#form-report-comment-display>.visible-success").removeClass("hidden");
+        }else{
+          $("#form-report-comment-display>.visible-loading").addClass("hidden");
+          $("#form-report-comment-display>.visible-error").removeClass("hidden");
+        }
+      }
+    });
+
   }
 
   function add_comment(){
@@ -54,7 +98,6 @@ function init_page(){
         $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
       success: function(response) {
-        alert(response.result);
         if(response.result){
           list_comments();
         }else{
@@ -97,16 +140,18 @@ function init_page(){
             for (;$_i<=5;$_i++) {
               $_comments+="<i class='fa fa-star-o'></i>";
             }
+            $_comment.content=$_comment.content.replace(/\n/g,"<br/>")
             $_comments+="    <p class='small text-right'>"+timestamp_to_str($_comment.created)+"</p>";
             $_comments+="  </div>";
             $_comments+="  <div class='col-md-9'>";
             $_comments+="    <div itemprop='articleBody' class='post-text'>";
             $_comments+="      <p>"+$_comment.content+"</p>";
-            $_comments+="      <p class='text-right'><a href='' class='small'>Denunciar comentario</a>";
+            $_comments+="      <p class='small text-left'><a href='javascript:confirm_report(\""+$_comment.comment_key+"\")'>Denunciar</a></p>";
             $_comments+="    </div>";
             $_comments+="  </div>";
             $_comments+="</article>";
           });
+
 
           $("[data-ajax=comments]").html($_comments);
 
@@ -131,8 +176,12 @@ function init_page(){
           reset_form();
         }else{
           if(response.error_code=="no_comments"){
+            $("[data-ajax=number]").html(localStorage.number);
             $("#form-search-display>.form-display").addClass("hidden");
+            $("#form-search-display>.visible-success").addClass("hidden");
+            $("#form-search-display>.visible-error").addClass("hidden");
             $("#form-search-display>.visible-no-data").removeClass("hidden");
+            $("[data-ajax=comments]").html("");
             reset_form();
           }else{
             $("#form-search-display>.form-display").addClass("hidden");
@@ -144,6 +193,7 @@ function init_page(){
     });
 
   }
+
 
   $("#form-search").validate({
     rules:{
@@ -162,6 +212,7 @@ function init_page(){
     preferredCountries: ['es'],
     utilsScript: "../../assets/plugins/international-phones/lib/libphonenumber/build/utils.js"
   });
+
 
   function time() {
     return Math.floor(new Date()
@@ -256,5 +307,19 @@ function init_page(){
     return $_timestamp_to_str;
 
   }
+
+}
+
+function confirm_report($_comment_key){
+
+  $("#form-report-comment-display>.visible-error").addClass("hidden");
+  $("#form-report-comment-display>.visible-loading").addClass("hidden");
+  $("#form-report-comment-display>.visible-success").addClass("hidden");
+  $("#form-report-comment-display>.visible-init").removeClass("hidden");
+
+  $("#form-report-comment #comment_key").val($_comment_key);
+
+
+  $("#confirm_report_modal").modal("show");
 
 }

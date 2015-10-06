@@ -74,7 +74,6 @@
   body,
   .text-right,
   .text-left {
-    text-align: center;
   }
   h1 {
     font-size: 2.5em;
@@ -131,13 +130,13 @@
     padding-top: 4.5em;
   }
   .sep-top-3x {
-    padding-top: 5em;
+    padding-top: 8em;
   }
   .sep-top-4x {
-    padding-top: 6em;
+    padding-top: 10em;
   }
   .sep-top-5x {
-    padding-top: 8em;
+    padding-top: 12em;
   }
   .sep-bottom-xs {
     padding-bottom: 1em;

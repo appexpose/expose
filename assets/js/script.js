@@ -10,8 +10,8 @@ var $_SERVER_PATH = "http://www.appexpose.com/server/1.0.0/";
 //var $_SERVER_PATH = "../../"+$_PATH;
 
 // Development Local
-//var $_URL_SERVER = "http://localhost:8888/expose/";
-//var $_SERVER_PATH = "http://localhost:8888/expose/server/1.0.0/";
+var $_URL_SERVER = "http://localhost:8888/expose/";
+var $_SERVER_PATH = "http://localhost:8888/expose/server/1.0.0/";
 
 $_CONFIG["company_phone"] = "+34 636 36 22 24";
 $_CONFIG["company_info_mail"] = "info@appexpose.com";

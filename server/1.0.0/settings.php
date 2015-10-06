@@ -15,19 +15,16 @@
 
 	$server_option='server';
 	//$server_option='server_development';
-	//$server_option='local';
+	$server_option='local';
 
 	$_CONFIG=array();
+	$_CONFIG["created"]=1442759136;
 	$_CONFIG["close"]=0;
 	$_CONFIG["debug_mode"]="debug";
-	$_CONFIG["terms_of_service"]="";
 	$_CONFIG["terms_of_service_version"]=1;
-	$_CONFIG["privacy_policy"]="";
 	$_CONFIG["privacy_policy_version"]=1;
-	$_CONFIG["use_of_cookies"]="";
 	$_CONFIG["use_of_cookies_version"]=1;
 	$_CONFIG["android_project_number"]="";
-	$_CONFIG["android_server_key"]="";
 	$_CONFIG["android_server_key"]="";
 	$_CONFIG["available_app_versions_ios"]="1.0";
 	$_CONFIG["available_app_versions_android"]="1.0";
