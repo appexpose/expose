@@ -15,7 +15,7 @@
 
 	$server_option='server';
 	//$server_option='server_development';
-	$server_option='local';
+	//$server_option='local';
 
 	$_CONFIG=array();
 	$_CONFIG["created"]=1442759136;
