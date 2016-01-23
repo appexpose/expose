@@ -62,6 +62,7 @@ function init_page(){
         "version":"1.0"
       },
       error: function(data, textStatus, jqXHR) {
+        console.error("[report_comment] Ajax Error");
         $("#form-report-comment-display>.visible-loading").addClass("hidden");
         $("#form-report-comment-display>.visible-error").removeClass("hidden");
       },
@@ -71,6 +72,7 @@ function init_page(){
           $("#form-report-comment-display>.visible-loading").addClass("hidden");
           $("#form-report-comment-display>.visible-success").removeClass("hidden");
         }else{
+          console.error("[report_comment] Response Error");
           $("#form-report-comment-display>.visible-loading").addClass("hidden");
           $("#form-report-comment-display>.visible-error").removeClass("hidden");
         }
@@ -94,6 +96,7 @@ function init_page(){
         "content":$("#form-add-comment #content").val()
       },
       error: function(data, textStatus, jqXHR) {
+        console.error("[add_comment] Ajax Error");
         $("#form-add-comment-display>.form-display").addClass("hidden");
         $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
@@ -101,6 +104,7 @@ function init_page(){
         if(response.result){
           list_comments();
         }else{
+          console.error("[add_comment] Response Error");
           $("#form-add-comment-display>.form-display").addClass("hidden");
           $("#form-add-comment-display>.visible-error").removeClass("hidden");
         }
@@ -123,6 +127,7 @@ function init_page(){
         "limit":10
       },
       error: function(data, textStatus, jqXHR) {
+        console.error("[list_comments] Ajax Error");
         $("#form-search-display>.form-display").addClass("hidden");
         $("#form-search-display>.visible-error").removeClass("hidden");
       },
@@ -175,6 +180,7 @@ function init_page(){
           $("#form-search-display>.visible-success").removeClass("hidden");
           reset_form();
         }else{
+          console.error("[list_comments] Response Error");
           if(response.error_code=="no_comments"){
             $("[data-ajax=number]").html(localStorage.number);
             $("#form-search-display>.form-display").addClass("hidden");

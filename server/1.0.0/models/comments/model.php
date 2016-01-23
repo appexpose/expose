@@ -51,7 +51,6 @@
       if(!@checkInputData($action_data["device_key"],"device_key")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["system"],"system")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["version"],"version")){echo json_encode($response);die();}
-      if(!@checkInputData($action_data["number"],"number")){echo json_encode($response);die();}
       if(!@checkInputDataZeroValid($action_data["offset"],"offset")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["limit"],"limit")){echo json_encode($response);die();}
 
@@ -64,6 +63,19 @@
       $action_data["number"]=str_replace("+","00",$action_data["number"]);
       $action_data["number"]=str_replace("-","",$action_data["number"]);
       $action_data["number"]=str_replace(" ","",$action_data["number"]);
+
+      $contacts=array();
+
+      if(!issetandnotempty($action_data["number"])){
+        $contact=array();
+        $contact["number"]=$action_data["number"];
+        $contacts[]=$contact;
+      }else{
+        $table="contacts";
+        $filter=array();
+        $filter["device_key"]=array("operation"=>"=","value"=>$action_data["device_key"]);
+        $contacts=listInBD($table,$filter);
+      }
 
       $table="searchs";
       $data=array();
@@ -84,35 +96,38 @@
       updateInBD($table,$filter,$data);
 
 
+      $response["data"]=array();
 
-      $table="comments";
-      $filter=array();
-      $filter["number"]=array("operation"=>"=","value"=>$action_data["number"]);
-      $filter["reported"]=array("operation"=>"=","value"=>0);
-      $fields=array();
-      $order="created desc";
-      $offset=$action_data["offset"];
-      $limit=$action_data["limit"];
-      $comments=listInBD($table,$filter,$fields,$order,$offset,$limit);
-      if(!issetandnotempty($comments)){
-        $response["result"]=false;
-        $response["error_code"]="no_comments";
-        debug_log("END");
-        echo json_encode($response);
-        die();
-      }else{
-        $number["comments_amount"]=countInBD($table,$filter);
-        $sum_field="rating";
-        $number["rating"]=sumInBD($table,$filter,$sum_field);
-        $number["rating"]=intval($number["rating"]/$number["comments_amount"]);
+      foreach($contacts as $key=>$contact){
+        $table="comments";
+        $filter=array();
+        $filter["number"]=array("operation"=>"=","value"=>$contact["number"]);
+        $filter["reported"]=array("operation"=>"=","value"=>0);
+        $fields=array();
+        $order="created desc";
+        $offset=$action_data["offset"];
+        $limit=$action_data["limit"];
+        $comments=listInBD($table,$filter,$fields,$order,$offset,$limit);
+        if(!issetandnotempty($comments)){
+          $response["data"][$contact["number"]]=array();
+          $response["data"][$contact["number"]]["rating"]=0;
+          $response["data"][$contact["number"]]["comments_amount"]=0;
+          $response["data"][$contact["number"]]["comments"]=array();
 
-        $response["data"]=array();
-        $response["data"]["number"]=$number["number"];
-        $response["data"]["rating"]=$number["rating"];
-        $response["data"]["comments_amount"]=$number["comments_amount"];
+        }else{
+          $contact["comments_amount"]=countInBD($table,$filter);
+          $sum_field="rating";
+          $contact["rating"]=sumInBD($table,$filter,$sum_field);
+          $contact["rating"]=intval($contact["rating"]/$contact["comments_amount"]);
 
-        $response["data"]["comments"]=$comments;
+          $response["data"][$contact["number"]]=array();
+          $response["data"][$contact["number"]]["rating"]=$contact["rating"];
+          $response["data"][$contact["number"]]["comments_amount"]=$contact["comments_amount"];
+
+          $response["data"][$contact["number"]]["comments"]=$comments;
+        }
       }
+
 
       break;
 

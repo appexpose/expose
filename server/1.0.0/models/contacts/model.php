@@ -45,39 +45,74 @@
 
   switch ($action){
 
-    case "login":
+    case "update_contacts":
 
       // Check Input Data
       if(!@checkInputData($action_data["device_key"],"device_key")){echo json_encode($response);die();}
+      if(!@checkInputData($action_data["contacts"],"contacts")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["system"],"system")){echo json_encode($response);die();}
       if(!@checkInputData($action_data["version"],"version")){echo json_encode($response);die();}
 
       if(!@checkSystemVersion($action_data["system"],$action_data["version"])){echo json_encode($response);debug_log($response["error_code"]);debug_log("END");die();}
 
-      if(!@checkDeviceKey($action_data["device_key"])){
-        $table="users";
-        $data=array();
-        $data["device_key"]=sha1($timestamp.rand(0,10000)."expose_add_device_key");
-        $data["created"]=$timestamp;
-        addInBD($table,$data);
-        $action_data["device_key"]=$data["device_key"];
-      }
+      $numbers=explode(",",$action_data["contacts"]);
 
-      $table="users";
+      foreach ($numbers as $key => $number){
+        $table="contacts";
+        $filter=array();
+        $filter["device_key"]=array("operation"=>"=","value"=>$action_data["device_key"]);
+        $filter["number"]=array("operation"=>"=","value"=>$number);
+        if(isInBD($table,$filter)){
+          $table="contacts";
+          $filter=array();
+          $filter["device_key"]=array("operation"=>"=","value"=>$action_data["device_key"]);
+          $filter["number"]=array("operation"=>"=","value"=>$number);
+          $data=array();
+          $data["last_update"]=$timestamp;
+          updateInBD($table,$filter);
+
+        }else{
+          $table="contacts";
+          $data=array();
+          $data["device_key"]=$action_data["device_key"];
+          $data["number"]=$number;
+          $data["created"]=$timestamp;
+          $data["last_update"]=$timestamp;
+          addInBD($table,$data);
+        }
+      }
+      $table="contacts";
       $filter=array();
       $filter["device_key"]=array("operation"=>"=","value"=>$action_data["device_key"]);
-      $data=array();
-      $data["device_key"]=$action_data["device_key"];
-      $data["last_connection"]=$timestamp;
-      $data["system"]=$action_data["system"];
-      $data["version"]=$action_data["version"];
-      updateInBD($table,$filter,$data);
+      $filter["last_update"]=array("operation"=>"=","value"=>$timestamp);
+      deleteInBD($table,$filter);
+
 
       $response["data"]=array();
-      $response["data"]["device_key"]=$action_data["device_key"];
+
+      foreach($numbers as $key=>$number){
+        $table="comments";
+        $filter=array();
+        $filter["number"]=array("operation"=>"=","value"=>$number);
+        $filter["reported"]=array("operation"=>"=","value"=>0);
+        if(!isInBD($table,$filter)){
+          $response["data"][$number]=array();
+          $response["data"][$number]["rating"]=0;
+          $response["data"][$number]["comments_amount"]=0;
+        }else{
+          $contact["comments_amount"]=countInBD($table,$filter);
+          $sum_field="rating";
+          $contact["rating"]=sumInBD($table,$filter,$sum_field);
+          $contact["rating"]=intval($contact["rating"]/$contact["comments_amount"]);
+
+          $response["data"][$number]=array();
+          $response["data"][$number]["rating"]=$contact["rating"];
+          $response["data"][$number]["comments_amount"]=$contact["comments_amount"];
+
+        }
+      }
 
       break;
-      
 
     default:
       notValidAction();echo json_encode($response);die();

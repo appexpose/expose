@@ -45,15 +45,14 @@ function session_start(){
       "version":"1.0",
     },
     error: function(data, textStatus, jqXHR) {
-
+      console.error("[login] Ajax Error");
     },
     success: function(response) {
       if(response.result){
         localStorage.device_key=response.data.device_key;
-        localStorage.device_key=response.data.device_key;
         init_page();
       }else{
-
+        console.error("[login] Response Error");
       }
     }
   });
