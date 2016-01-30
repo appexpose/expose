@@ -3,15 +3,15 @@ var $_s=new Array();
 
 // Producción
 var $_URL_SERVER = "http://www.appexpose.com/";
-var $_SERVER_PATH = "http://www.appexpose.com/server/1.0.0/";
+var $_SERVER_PATH = "http://www.appexpose.com/server/1.0.1/";
 
 // Development Server
 //var $_URL_SERVER = "http://develop.appexpose.com/";
 //var $_SERVER_PATH = "../../"+$_PATH;
 
 // Development Local
-//var $_URL_SERVER = "http://localhost:8888/expose/";
-//var $_SERVER_PATH = "http://localhost:8888/expose/server/1.0.0/";
+//var $_URL_SERVER = "http://localhost/expose/";
+//var $_SERVER_PATH = "http://localhost/expose/server/1.0.1/";
 
 $_CONFIG["company_phone"] = "+34 636 36 22 24";
 $_CONFIG["company_info_mail"] = "info@appexpose.com";
@@ -34,28 +34,6 @@ function session_start(){
     localStorage.device_key="no_device_key";
   }
 
-  $.ajax({
-    type: "POST",
-    dataType: 'json',
-    url: $_SERVER_PATH+"models/users/model.php",
-    data: {
-      "action":"login",
-      "device_key":localStorage.device_key,
-      "system":"web",
-      "version":"1.0",
-    },
-    error: function(data, textStatus, jqXHR) {
-      console.error("[login] Ajax Error");
-    },
-    success: function(response) {
-      if(response.result){
-        localStorage.device_key=response.data.device_key;
-        init_page();
-      }else{
-        console.error("[login] Response Error");
-      }
-    }
-  });
 }
 
 $("form").submit(function(e){

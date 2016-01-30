@@ -25,7 +25,7 @@
   define('SERVER_PATH', '../../../');
   $timestamp=strtotime(date("Y-m-d H:i:s"));
   include(PATH."includes/init.php");
-  $page_path="WS::1.2.5::Users";
+  $page_path="WS::1.0.0::Users";
   debug_log("START");
   $response=array();
 
