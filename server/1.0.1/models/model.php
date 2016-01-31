@@ -140,7 +140,7 @@
           $tmp= db_fetch($r2);
           $contact["last_reported"]=$tmp["reported"];
           if($tmp["reported"]==0){
-            $contact["last_content"]=substr_dots($tmp["content"],6);
+            $contact["last_content"]=substr_dots($tmp["content"],50);
           }else{
             $contact["last_content"]="";
           }
