@@ -122,6 +122,32 @@
 
       break;
 
+    case "list_contacts":
+
+      if(!@check_action_data($action_data["device_key"],"device_key")){echo json_encode($response);die();}
+
+      $query = "SELECT * FROM contacts WHERE device_key='".$action_data["device_key"]."'";
+      $r = db_query($query,$db);
+
+      $response["data"]=array();
+      $response["data"]["contacts"]=array();
+      while($contact=db_fetch($r)) {
+        $query = "SELECT count(*) as comments_amount, sum(rating) as rating_total FROM comments WHERE number='".$contact["number"]."'";
+        $r2 = db_query($query,$db);
+        $tmp= db_fetch($r);
+        $contact["comments_amount"]=$tmp["comments_amount"];
+        $contact["rating"]=intval($tmp["rating_total"]/$tmp["comments_amount"]);
+
+        $query = "SELECT content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
+        $r2 = db_query($query,$db);
+        $tmp= db_fetch($r);
+        $contact["last_content"]=$tmp["content"];
+
+        $response["data"]["contacts"][]=$contact;
+  		}
+
+      break;
+
     default:
       $response["result"]=false;
       error_log("[ERROR] [".$page_path."] Controler Action not valid (".$action.")");

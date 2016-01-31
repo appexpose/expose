@@ -93,7 +93,7 @@ function add_comment(){
     },
     success: function(response) {
       if(response.result){
-        list_comments();
+        list_comments(0,10);
       }else{
         console.error("[add_comment] Response Error "+response.error_code);
         $("#form-add-comment-display>.form-display").addClass("hidden");
@@ -103,7 +103,7 @@ function add_comment(){
   });
 }
 
-function list_comments(){
+function list_comments(offset,limit){
   $.ajax({
     type: "POST",
     dataType: "json",
@@ -111,8 +111,8 @@ function list_comments(){
     data: {
       "action":"list_comments",
       "numbers":localStorage.number,
-      "offset":0,
-      "limit":10
+      "offset":offset,
+      "limit":limit
     },
     error: function(data, textStatus, jqXHR) {
       console.error("[list_comments] Ajax Error");
@@ -154,8 +154,11 @@ function list_comments(){
           $_comments+="</article>";
         });
 
-
-        $("[data-ajax=comments]").html($_comments);
+        if(offset==0){
+          $("[data-ajax=comments]").html($_comments);
+        }else{
+          $("[data-ajax=comments]").append($_comments);
+        }
 
         $("[data-ajax=number]").html(response.data.number);
         $_rating_total=parseInt($_rating_total/$_comments_count);
@@ -210,7 +213,7 @@ $("#form-search").validate({
     $_number=$("#form-search #number").val();
     console.error($_number);
     localStorage.number=$_number;
-    list_comments();
+    list_comments(0,10);
   }
 });
 $("#number").intlTelInput({
