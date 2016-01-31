@@ -155,6 +155,15 @@
 
       break;
 
+    case "list_stats":
+
+      $response["data"]=array();
+      $response["data"]["display"]=array();
+      $response["data"]["display"]["created"]="Febrero 2016";
+
+      
+      break;
+
     default:
       $response["result"]=false;
       error_log("[ERROR] [".$page_path."] Controler Action not valid (".$action.")");

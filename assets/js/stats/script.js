@@ -4,19 +4,16 @@ function init_page(){
   $.ajax({
     type: "POST",
     dataType: 'json',
-    url: $_SERVER_PATH+"models/stats/model.php",
+    url: $_SERVER_PATH+"models/model.php",
     data: {
-      "action":"list_stats",
-      "device_key":localStorage.device_key,
-      "system":"web",
-      "version":"1.0",
+      "action":"list_stats"
     },
     error: function(data, textStatus, jqXHR) {
       alert("ajax error");
     },
     success: function(response) {
       if(response.result){
-        $("[data-ajax='display_created']").html(stopwhatch_to_str(response.data.display.created));
+        $("[data-ajax='display_created']").html(response.data.display.created);
 
         $("[data-ajax='display_users']").html(response.data.display.users);
         jQuery.each(response.data.bar_height.users, function($_key,$_bar_height){
@@ -65,76 +62,4 @@ function init_page(){
       }
     }
   });
-
-  function time() {
-    return Math.floor(new Date()
-      .getTime() / 1000);
-  }
-
-  function stopwhatch_to_str($_timestamp){
-
-    $_from_now = time() - $_timestamp;
-    if ($_from_now < 1){
-      return 'ahora mismo';
-    }
-
-    $_s["pre_time_str"] = "hace";
-    $_s["post_time_str"] = "";
-
-    $_timestamp_to_str=$_s["pre_time_str"];
-    $_r=0;
-
-    $_d = $_from_now / (30*24*60*60);
-    if ($_d >= 1){
-      $_r = Math.round($_d);
-      $_timestamp_to_str+=" "+$_r;
-      if($_r > 1){
-        $_timestamp_to_str+=" meses ";
-      }else{
-        $_timestamp_to_str+=" mes ";
-      }
-    }
-    $_from_now=$_from_now-($_r*(30*24*60*60));
-
-    $_d = $_from_now / (24 * 60 * 60);
-    if ($_d >= 1){
-      $_r = parseInt($_d);
-      $_timestamp_to_str+=" "+$_r;
-      if($_r > 1){
-        $_timestamp_to_str+=" d&iacute;as ";
-      }else{
-        $_timestamp_to_str+=" día ";
-      }
-    }
-    $_from_now=$_from_now-($_r*(24*60*60));
-
-    $_d = $_from_now / (60*60);
-    if ($_d >= 1){
-      $_r = parseInt($_d);
-      $_timestamp_to_str+=" "+$_r;
-      if($_r > 1){
-        $_timestamp_to_str+=" horas ";
-      }else{
-        $_timestamp_to_str+=" hora ";
-      }
-    }
-    $_from_now=$_from_now-($_r*(60*60));
-
-    $_d = $_from_now / (60);
-    if ($_d >= 1){
-      $_r = parseInt($_d);
-      $_timestamp_to_str+=" "+$_r;
-      if($_r > 1){
-        $_timestamp_to_str+=" minutos ";
-      }else{
-        $_timestamp_to_str+=" minuto ";
-      }
-    }
-    $_timestamp_to_str+=$_s["post_time_str"];
-
-
-
-    return $_timestamp_to_str;
-
-  }
 }

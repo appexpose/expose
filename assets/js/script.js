@@ -26,15 +26,6 @@ localStorage.version='1.0';
 $("[data-local='system_year']").html(localStorage.system_year);
 $("[data-local='system_version']").html(localStorage.system_version);
 
-session_start();
-
-function session_start(){
-
-  if ((typeof localStorage.device_key == 'undefined')||(localStorage.device_key == null)||(localStorage.device_key == "null")||(localStorage.device_key == "no_device_key")){
-    localStorage.device_key="no_device_key";
-  }
-
-}
 
 $("form").submit(function(e){
   e.preventDefault();
