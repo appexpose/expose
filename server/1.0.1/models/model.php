@@ -133,9 +133,8 @@
       $response["data"]["contacts"]=array();
       while($contact=db_fetch($r)) {
         $query = "SELECT count(*) as comments_amount, sum(rating) as rating_total FROM comments WHERE number='".$contact["number"]."'";
-        error_log($query);
         $r2 = db_query($query,$db);
-        $tmp= db_fetch($r);
+        $tmp= db_fetch($r2);
         $contact["comments_amount"]=$tmp["comments_amount"];
         if($tmp["comments_amount"]>0){
           $contact["rating"]=intval($tmp["rating_total"]/$tmp["comments_amount"]);
@@ -145,7 +144,7 @@
 
         $query = "SELECT content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
         $r2 = db_query($query,$db);
-        $tmp= db_fetch($r);
+        $tmp= db_fetch($r2);
         $contact["last_content"]=$tmp["content"];
 
         $response["data"]["contacts"][]=$contact;
