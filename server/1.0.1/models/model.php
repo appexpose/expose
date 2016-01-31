@@ -136,7 +136,11 @@
         $r2 = db_query($query,$db);
         $tmp= db_fetch($r);
         $contact["comments_amount"]=$tmp["comments_amount"];
-        $contact["rating"]=intval($tmp["rating_total"]/$tmp["comments_amount"]);
+        if($tmp["comments_amount"]>0){
+          $contact["rating"]=intval($tmp["rating_total"]/$tmp["comments_amount"]);
+        }else{
+          $contact["rating"]=0;
+        }
 
         $query = "SELECT content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
         $r2 = db_query($query,$db);
