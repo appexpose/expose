@@ -126,7 +126,7 @@
 
       if(!@check_action_data($action_data["device_key"],"device_key")){echo json_encode($response);die();}
 
-      $query = "SELECT * FROM contacts WHERE device_key='".$action_data["device_key"]."'";
+      $query = "SELECT name FROM contacts WHERE device_key='".$action_data["device_key"]."'";
       $r = db_query($query,$db);
 
       $response["data"]=array();
