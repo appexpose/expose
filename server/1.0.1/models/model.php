@@ -96,9 +96,6 @@
 
       if(!@check_action_data($action_data["comment_key"],"comment_key")){echo json_encode($response);die();}
 
-      $brand=array();
-      $brand["brand_key"]=$action_data["brand_key"];
-
       $query = "UPDATE comments SET reported=1 WHERE comment_key = '".$action_data["comment_key"]."'";
       db_query($query,$db);
 
