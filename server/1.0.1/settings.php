@@ -21,7 +21,7 @@
 	/*if($server_option=="server_development"){
 		$dev_certificate="-dev";
 	}*/
-	$_CONFIG["ios_certificate_path"]=SERVER_PATH."resources/certificates/apns".$dev_certificate."-converfit.pem";
+	$_CONFIG["ios_certificate_path"]=SERVER_PATH."resources/certificates/apns-expose.pem";
 	$_CONFIG["android_project_number"]="332855980435";
 	$_CONFIG["android_server_key"]="AIzaSyB2t4LQnFtmLAYRJmMwdBFAjCJvRt3jlkU";
 
@@ -35,7 +35,7 @@
 		'bdprefix' => ''
 	);
 
-	$conf = array(
+	/*$conf = array(
 		'bdtype' => 'mysql',
 		'bdserver' => 'localhost',
 		'bdport' => '',
@@ -43,7 +43,7 @@
 		'bduser' => 'root',
 		'bdpass' => 'root',
 		'bdprefix' => ''
-	);
+	);*/
 
 
 	$url_server = "http://www.converfit.com/socialit/";
