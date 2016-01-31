@@ -138,6 +138,7 @@
           $query = "SELECT reported, content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
           $r2 = db_query($query,$db);
           $tmp= db_fetch($r2);
+          $contact["last_reported"]=$tmp["reported"];
           if($tmp["reported"]==0){
             $contact["last_content"]=substr_dots($tmp["content"],6);
           }else{
