@@ -138,7 +138,7 @@
           $query = "SELECT content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
           $r2 = db_query($query,$db);
           $tmp= db_fetch($r2);
-          $contact["last_content"]=$tmp["content"];
+          $contact["last_content"]=substr_dots($tmp["content"],6);
         }else{
           $contact["rating"]=0;
           $contact["last_content"]="";

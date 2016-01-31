@@ -211,7 +211,6 @@ $("#form-search").validate({
     $("#form-search-display>.form-display").addClass("hidden");
     $("#form-search-display>.visible-loading").removeClass("hidden");
     $_number=$("#form-search #number").val();
-    console.error($_number);
     localStorage.number=$_number;
     list_comments(0,10);
   }
