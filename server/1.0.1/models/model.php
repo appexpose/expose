@@ -135,10 +135,14 @@
         $contact["comments_amount"]=$tmp["comments_amount"];
         if($tmp["comments_amount"]>0){
           $contact["rating"]=intval($tmp["rating_total"]/$tmp["comments_amount"]);
-          $query = "SELECT content FROM comments WHERE number='".$contact["number"]."' ORDER BY created desc LIMIT 1";
+          $query = "SELECT reported, content FROM comments WHERE number='".$contact["number"]."' and ORDER BY created desc LIMIT 1";
           $r2 = db_query($query,$db);
           $tmp= db_fetch($r2);
-          $contact["last_content"]=substr_dots($tmp["content"],6);
+          if($tmp["reported"]==0){
+            $contact["last_content"]=substr_dots($tmp["content"],6);            
+          }else{
+            $contact["last_content"]="";
+          }
         }else{
           $contact["rating"]=0;
           $contact["last_content"]="";
