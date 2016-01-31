@@ -126,13 +126,14 @@
 
       if(!@check_action_data($action_data["device_key"],"device_key")){echo json_encode($response);die();}
 
-      $query = "SELECT name FROM contacts WHERE device_key='".$action_data["device_key"]."'";
+      $query = "SELECT name,number FROM contacts WHERE device_key='".$action_data["device_key"]."'";
       $r = db_query($query,$db);
 
       $response["data"]=array();
       $response["data"]["contacts"]=array();
       while($contact=db_fetch($r)) {
         $query = "SELECT count(*) as comments_amount, sum(rating) as rating_total FROM comments WHERE number='".$contact["number"]."'";
+        error_log($query);
         $r2 = db_query($query,$db);
         $tmp= db_fetch($r);
         $contact["comments_amount"]=$tmp["comments_amount"];
