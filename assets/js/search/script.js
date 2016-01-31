@@ -62,7 +62,7 @@ function report_comment($_comment_key,$_report_option){
     },
     success: function(response) {
       if(response.result){
-        list_comments();
+        list_comments(0,10);
         $("#form-report-comment-display>.visible-loading").addClass("hidden");
         $("#form-report-comment-display>.visible-success").removeClass("hidden");
       }else{
