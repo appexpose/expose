@@ -1,7 +1,5 @@
 
 .stats-block{
-  overflow: auto;
-  text-align: right;
 }
 .progress-vertical {
   margin-right:6px;
@@ -23,4 +21,9 @@
 }
 .btn-square{
   border-radius: 3px;
+}
+.jqstooltip {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }

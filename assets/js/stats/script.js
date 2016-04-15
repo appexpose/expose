@@ -1,21 +1,92 @@
+$_SERVER_PATH="http://expose-server-rest.azurewebsites.net";
+
 $.ajax({
-  type: "POST",
+  type: "GET",
   dataType: 'json',
-  url: $_SERVER_PATH+"models/model.php",
-  data: {
-    "action":"list_stats"
-  },
+  url: $_SERVER_PATH+"/stats",
   error: function(data, textStatus, jqXHR) {
-    alert("ajax error");
+    $(".loading-panel").addClass("hidden");
+    $(".error-panel").removeClass("hidden");
   },
   success: function(response) {
+
+    var $_users=[];
+    var $_active_users=[];
+    var $_comments=[];
+    var $_searchs=[];
+    jQuery.each(response.stats, function($_key,$_value){
+      if($_key.startsWith("users_")){
+        $_users.push($_value);
+        $_users_last=$_value;
+      }else if($_key.startsWith("active_users_")){
+        $_active_users.push($_value);
+        $_active_users_last=$_value;
+      }else if($_key.startsWith("comments_")){
+        $_comments.push($_value);
+        $_comments_last=$_value;
+      }else if($_key.startsWith("searchs_")){
+        $_searchs.push($_value);
+        $_searchs_last=$_value;
+      }
+    });
+
+    $(".loading-panel").addClass("hidden");
+    $(".success-panel").removeClass("hidden");
+
+    var parentWidth = $('#users').width();
+    var valueCount = 30;
+    var barSpacing = 2;
+    var barWidth = Math.round((parentWidth - ( valueCount - 1 ) * barSpacing ) / valueCount);
+
+    $("#users_last").html($_users_last);
+    $('#users').sparkline($_users, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
+
+    });
+
+
+    $("#active_users_last").html($_active_users_last);
+    $('#active_users').sparkline($_active_users, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
+
+    });
+
+    $("#comments_last").html($_comments_last);
+    $('#comments').sparkline($_comments, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
+
+    });
+
+    $("#searchs_last").html($_searchs_last);
+    $('#searchs').sparkline($_searchs, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
+
+    });
+
+
+
+
+/*
     if(response.result){
       $("[data-ajax='display_created']").html(response.data.display.created);
 
       $("[data-ajax='display_users']").html(response.data.display.users);
-      jQuery.each(response.data.bar_height.users, function($_key,$_bar_height){
-        $("[data-ajax='bar_users_"+$_key+"']").css("height",$_bar_height+"%");
-      });
       jQuery.each(response.data.stats.users, function($_key,$_stat){
         $_title=$_stat+" Usuario";
         if($_stat>1){$_title=$_stat+" Usuarios";}
@@ -56,6 +127,6 @@ $.ajax({
 
     }else{
 
-    }
+    }*/
   }
 });
