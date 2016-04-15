@@ -178,7 +178,11 @@ login();
 
 function login(){
 
+  console.error("[login] Start");
+
   if((typeof localStorage.userKey == 'undefined')||(localStorage.userKey=='')){
+    console.error("[login] Signup");
+
     $.ajax({
       type: "POST",
       dataType: "json",
@@ -200,12 +204,14 @@ function login(){
       }
     });
   }else{
+    console.error("[login] Login");
+
     $.ajax({
       type: "PUT",
       dataType: "json",
       url: $_SERVER_PATH+"/users/"+localStorage.userKey+"/login",
       error: function(data, textStatus, jqXHR) {
-        console.error("[login] Ajax Error");
+        console.error("[login] Ajax Error "+data);
       },
       success: function(response) {
         console.error("[login] Success");
