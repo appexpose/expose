@@ -211,7 +211,7 @@ function login(){
       dataType: "json",
       url: $_SERVER_PATH+"/users/"+localStorage.userKey+"/login",
       error: function(data, textStatus, jqXHR) {
-        console.error("[login] Ajax Error "+data);
+        console.error("[login] Ajax Error "+data.message);
       },
       success: function(response) {
         console.error("[login] Success");
