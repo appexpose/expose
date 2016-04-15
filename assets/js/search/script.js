@@ -190,7 +190,7 @@ function login(){
         "version":"1.0",
       },
       error: function(data, textStatus, jqXHR) {
-        console.error("[login] Ajax Error");
+        console.error("[Signup] Ajax Error");
         $("#form-add-comment-display>.form-display").addClass("hidden");
         $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
@@ -206,11 +206,9 @@ function login(){
       url: $_SERVER_PATH+"/users/"+localStorage.userKey+"/login",
       error: function(data, textStatus, jqXHR) {
         console.error("[login] Ajax Error");
-        $("#form-add-comment-display>.form-display").addClass("hidden");
-        $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
       success: function(response) {
-
+        console.error("[login] Success");
       }
     });
   }
