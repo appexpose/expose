@@ -417,37 +417,6 @@ Ottavio.events.push(Ottavio.isotope);
 // end isotope module
 
 
-// google maps module
-Ottavio.gmaps = function(){
-    var
-        $elem = $('#map-canvas'),
-        options = window.mapOptions || {},
-        apiLoad = function() {
-            $.getScript('https://maps.googleapis.com/maps/api/js?v=3.exp&callback=Ottavio.gmaps')
-                //.done(function (script, textStatus) { })
-                .fail(function (jqxhr) {
-                    console.error('Could not load Google Maps: ' + jqxhr);
-                });
-        },
-        initMap = function(){
-            if ($.fn.gMap !== undefined) {
-                $elem.gMap(options);
-            } else {
-                console.error('jQuery.gMap not available!');
-            }
-        };
-
-    if (window.google && google.maps) {
-        initMap();
-    } else {
-        apiLoad();
-    }
-    return {
-        init: initMap
-    };
-};
-Ottavio.events.push(Ottavio.gmaps);
-// end google maps module
 
 
 

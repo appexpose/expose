@@ -1,24 +1,6 @@
 var $_CONFIG= new Array();
 var $_s=new Array();
 
-// Producción
-var $_URL_SERVER = "http://www.appexpose.com/";
-var $_SERVER_PATH = "http://www.appexpose.com/server/1.0.1/";
-
-// Development Server
-//var $_URL_SERVER = "http://develop.appexpose.com/";
-//var $_SERVER_PATH = "../../"+$_PATH;
-
-// Development Local
-//var $_URL_SERVER = "http://localhost/expose/";
-//var $_SERVER_PATH = "http://localhost/expose/server/1.0.1/";
-
-$_CONFIG["company_phone"] = "+34 636 36 22 24";
-$_CONFIG["company_info_mail"] = "info@appexpose.com";
-$_CONFIG["debug_mode"] = true;
-$_CONFIG["restricted_page"] = false;
-
-
 localStorage.year='2015';
 localStorage.system='web';
 localStorage.version='1.0';
