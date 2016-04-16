@@ -1,5 +1,103 @@
 $_SERVER_PATH="http://expose-server-rest.azurewebsites.net";
+$_SERVER_PATH="http://localhost:8080";
 
+var timestamp = new Date().getTime();
+timestamp = Math.floor(timestamp / 1000);
+
+var $_users=[];
+var $_active_users=[];
+var $_comments=[];
+var $_searchs=[];
+
+for(i=0;i<=29;i++){
+  $_users[i]=0;
+  $_active_users[i]=0;
+  $_comments[i]=0;
+  $_searchs[i]=0;
+  getStats(i);
+}
+
+function getStats(i){
+  stats_timestamp=timestamp-(86400*(29-i))
+  $.ajax({
+    type: "GET",
+    dataType: 'json',
+    url: $_SERVER_PATH+"/stats/"+stats_timestamp,
+    error: function(data, textStatus, jqXHR) {
+      $(".loading-panel").addClass("hidden");
+      $(".error-panel").removeClass("hidden");
+    },
+    success: function(response) {
+      $_active_users[i]=response.stats.active_users;
+      $_users[i]=response.stats.users;
+      $_comments[i]=response.stats.comments;
+      $_searchs[i]=response.stats.searchs;
+
+
+
+      if(i==29){
+        $("#users_last").html(response.stats.users);
+        $("#active_users_last").html(response.stats.active_users);
+        $("#comments_last").html(response.stats.comments);
+        $("#searchs_last").html(response.stats.searchs);
+
+      }
+    }
+  });
+
+}
+
+$(document).ajaxStop(function () {
+
+
+  $(".loading-panel").addClass("hidden");
+  $(".success-panel").removeClass("hidden");
+
+
+  var parentWidth = $('#users').width();
+  var valueCount = 30;
+  var barSpacing = 2;
+  var barWidth = Math.round((parentWidth - ( valueCount - 1 ) * barSpacing ) / valueCount);
+
+
+  $('#users').sparkline($_users, {
+    type: 'bar',
+    height: '100',
+    barColor: '#1abc9c',
+    barSpacing: barSpacing,
+    barWidth: barWidth
+
+  });
+
+  $('#active_users').sparkline($_active_users, {
+    type: 'bar',
+    height: '100',
+    barColor: '#1abc9c',
+    barSpacing: barSpacing,
+    barWidth: barWidth
+
+  });
+
+  $('#comments').sparkline($_comments, {
+    type: 'bar',
+    height: '100',
+    barColor: '#1abc9c',
+    barSpacing: barSpacing,
+    barWidth: barWidth
+
+  });
+
+  $('#searchs').sparkline($_searchs, {
+    type: 'bar',
+    height: '100',
+    barColor: '#1abc9c',
+    barSpacing: barSpacing,
+    barWidth: barWidth
+
+  });
+});
+
+/*
 $.ajax({
   type: "GET",
   dataType: 'json',
@@ -10,10 +108,6 @@ $.ajax({
   },
   success: function(response) {
 
-    var $_users=[];
-    var $_active_users=[];
-    var $_comments=[];
-    var $_searchs=[];
     jQuery.each(response.stats, function($_key,$_value){
       if($_key.startsWith("users_")){
         $_users.push($_value);
@@ -49,7 +143,8 @@ $.ajax({
     });
 
 
-    $("#active_users_last").html($_active_users_last);
+    $("#users_last").html($_users_last);
+  $("#active_users_last").html($_active_users_last);
     $('#active_users').sparkline($_active_users, {
       type: 'bar',
       height: '100',
@@ -59,6 +154,8 @@ $.ajax({
 
     });
 
+    $("#users_last").html($_users_last);
+  $("#active_users_last").html($_active_users_last);
     $("#comments_last").html($_comments_last);
     $('#comments').sparkline($_comments, {
       type: 'bar',
@@ -69,6 +166,9 @@ $.ajax({
 
     });
 
+    $("#users_last").html($_users_last);
+  $("#active_users_last").html($_active_users_last);
+    $("#comments_last").html($_comments_last);
     $("#searchs_last").html($_searchs_last);
     $('#searchs').sparkline($_searchs, {
       type: 'bar',
@@ -79,54 +179,6 @@ $.ajax({
 
     });
 
-
-
-
-/*
-    if(response.result){
-      $("[data-ajax='display_created']").html(response.data.display.created);
-
-      $("[data-ajax='display_users']").html(response.data.display.users);
-      jQuery.each(response.data.stats.users, function($_key,$_stat){
-        $_title=$_stat+" Usuario";
-        if($_stat>1){$_title=$_stat+" Usuarios";}
-        $("[data-ajax='progress_users_"+$_key+"']").attr("title",$_title);
-      });
-
-      $("[data-ajax='display_active_users']").html(response.data.display.active_users);
-      jQuery.each(response.data.bar_height.active_users, function($_key,$_bar_height){
-        $("[data-ajax='bar_active_users_"+$_key+"']").css("height",$_bar_height+"%");
-      });
-      jQuery.each(response.data.stats.active_users, function($_key,$_stat){
-        $_title=$_stat+" Alta";
-        if($_stat>1){$_title=$_stat+" Altas";}
-        $("[data-ajax='progress_active_users_"+$_key+"']").attr("title",$_title);
-      });
-
-      $("[data-ajax='display_comments']").html(response.data.display.comments);
-      jQuery.each(response.data.bar_height.comments, function($_key,$_bar_height){
-        $("[data-ajax='bar_comments_"+$_key+"']").css("height",$_bar_height+"%");
-      });
-      jQuery.each(response.data.stats.comments, function($_key,$_stat){
-        $_title=$_stat+" Comentario";
-        if($_stat>1){$_title=$_stat+" Comentarios";}
-        $("[data-ajax='progress_comments_"+$_key+"']").attr("title",$_title);
-      });
-
-      $("[data-ajax='display_searchs']").html(response.data.display.searchs);
-      jQuery.each(response.data.bar_height.searchs, function($_key,$_bar_height){
-        $("[data-ajax='bar_searchs_"+$_key+"']").css("height",$_bar_height+"%");
-      });
-      jQuery.each(response.data.stats.searchs, function($_key,$_stat){
-        $_title=$_stat+" Búsqueda";
-        if($_stat>1){$_title=$_stat+" Búsquedas";}
-        $("[data-ajax='progress_searchs_"+$_key+"']").attr("title",$_title);
-      });
-
-      $('[data-toggle="tooltip"]').tooltip();
-
-    }else{
-
-    }*/
   }
 });
+*/
