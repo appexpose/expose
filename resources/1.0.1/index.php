@@ -1,6 +1,7 @@
 <?php
 echo "<h1>Index of Resources</h1>";
-$path = "<ul>";
+$path = ".";
+echo "<ul>";
 $dh = opendir($path);
 $i=1;
 while (($file = readdir($dh)) !== false) {
@@ -10,5 +11,5 @@ while (($file = readdir($dh)) !== false) {
     }
 }
 closedir($dh);
-$path = "</ul>";
+echo "</ul>";
 ?>
