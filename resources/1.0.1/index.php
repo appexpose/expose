@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Index of Resources</h1>";
+echo "<h1>Index of Expose Resources</h1>";
 $path = ".";
 echo "<ul>";
 $dh = opendir($path);
