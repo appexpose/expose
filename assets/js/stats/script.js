@@ -9,6 +9,8 @@ var $_active_users=[];
 var $_comments=[];
 var $_searchs=[];
 
+var $_error=false;
+
 getStats(0);
 
 function getStats(i){
@@ -23,6 +25,8 @@ function getStats(i){
     error: function(data, textStatus, jqXHR) {
       $(".loading-panel").addClass("hidden");
       $(".error-panel").removeClass("hidden");
+      $(".error-panel .msg").removeClass(data+" "+textStatus+" "+jqXHR);
+      $_error=true;
     },
     success: function(response) {
       $_active_users[i]=response.stats.active_users;
@@ -48,54 +52,57 @@ function getStats(i){
 
 $(document).ajaxStop(function () {
 
-  var end_timestamp = new Date().getTime();
-  end_timestamp = Math.floor(end_timestamp / 1000);
-  console.log("Time:  "+(end_timestamp-timestamp)+" seconds");
+  if(!$_error){
+    var end_timestamp = new Date().getTime();
+    end_timestamp = Math.floor(end_timestamp / 1000);
+    console.log("Time:  "+(end_timestamp-timestamp)+" seconds");
 
 
-  $(".loading-panel").addClass("hidden");
-  $(".success-panel").removeClass("hidden");
+    $(".loading-panel").addClass("hidden");
+    $(".success-panel").removeClass("hidden");
 
 
-  var parentWidth = $('#users').width();
-  var valueCount = 30;
-  var barSpacing = 2;
-  var barWidth = Math.round((parentWidth - ( valueCount - 1 ) * barSpacing ) / valueCount);
+    var parentWidth = $('#users').width();
+    var valueCount = 30;
+    var barSpacing = 2;
+    var barWidth = Math.round((parentWidth - ( valueCount - 1 ) * barSpacing ) / valueCount);
 
 
-  $('#users').sparkline($_users, {
-    type: 'bar',
-    height: '100',
-    barColor: '#1abc9c',
-    barSpacing: barSpacing,
-    barWidth: barWidth
+    $('#users').sparkline($_users, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
 
-  });
+    });
 
-  $('#active_users').sparkline($_active_users, {
-    type: 'bar',
-    height: '100',
-    barColor: '#1abc9c',
-    barSpacing: barSpacing,
-    barWidth: barWidth
+    $('#active_users').sparkline($_active_users, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
 
-  });
+    });
 
-  $('#comments').sparkline($_comments, {
-    type: 'bar',
-    height: '100',
-    barColor: '#1abc9c',
-    barSpacing: barSpacing,
-    barWidth: barWidth
+    $('#comments').sparkline($_comments, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
 
-  });
+    });
 
-  $('#searchs').sparkline($_searchs, {
-    type: 'bar',
-    height: '100',
-    barColor: '#1abc9c',
-    barSpacing: barSpacing,
-    barWidth: barWidth
+    $('#searchs').sparkline($_searchs, {
+      type: 'bar',
+      height: '100',
+      barColor: '#1abc9c',
+      barSpacing: barSpacing,
+      barWidth: barWidth
 
-  });
+    });
+  }
+
 });
