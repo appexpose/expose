@@ -1,4 +1,5 @@
 $_SERVER_PATH="http://expose-server-rest.azurewebsites.net";
+$_SERVER_PATH="http://localhost:8080";
 
 var timestamp = new Date().getTime();
 timestamp = Math.floor(timestamp / 1000);
@@ -8,16 +9,13 @@ var $_active_users=[];
 var $_comments=[];
 var $_searchs=[];
 
-for(i=0;i<=29;i++){
-  $_users[i]=0;
-  $_active_users[i]=0;
-  $_comments[i]=0;
-  $_searchs[i]=0;
-  getStats(i);
-}
+getStats(0);
 
 function getStats(i){
-  stats_timestamp=timestamp-(86400*(29-i))
+  stats_timestamp=timestamp-(86400*(100-i));
+
+  console.log("Start Call "+i);
+
   $.ajax({
     type: "GET",
     dataType: 'json',
@@ -32,14 +30,16 @@ function getStats(i){
       $_comments[i]=response.stats.comments;
       $_searchs[i]=response.stats.searchs;
 
+      console.log("Success Call "+i);
 
-
-      if(i==29){
+      if(i==100){
         $("#users_last").html(response.stats.users);
         $("#active_users_last").html(response.stats.active_users);
         $("#comments_last").html(response.stats.comments);
         $("#searchs_last").html(response.stats.searchs);
 
+      }else{
+        getStats(i+1)
       }
     }
   });
@@ -47,6 +47,10 @@ function getStats(i){
 }
 
 $(document).ajaxStop(function () {
+
+  var end_timestamp = new Date().getTime();
+  end_timestamp = Math.floor(end_timestamp / 1000);
+  console.log("Time:  "+(end_timestamp-timestamp)+" seconds");
 
 
   $(".loading-panel").addClass("hidden");
