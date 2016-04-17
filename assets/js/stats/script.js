@@ -1,5 +1,4 @@
 $_SERVER_PATH="http://expose-server-rest.azurewebsites.net";
-$_SERVER_PATH="http://localhost:8080";
 
 var timestamp = new Date().getTime();
 timestamp = Math.floor(timestamp / 1000);
