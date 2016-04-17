@@ -13,7 +13,7 @@ var $_error=false;
 getStats(0);
 
 function getStats(i){
-  stats_timestamp=timestamp-(86400*(100-i));
+  stats_timestamp=timestamp-(86400*(29-i));
 
   console.log("Start Call "+i);
 
@@ -35,7 +35,7 @@ function getStats(i){
 
       console.log("Success Call "+i);
 
-      if(i==100){
+      if(i==29){
         $("#users_last").html(response.stats.users);
         $("#active_users_last").html(response.stats.active_users);
         $("#comments_last").html(response.stats.comments);
