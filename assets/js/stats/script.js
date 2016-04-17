@@ -25,11 +25,7 @@ function getStats(i){
     error: function(data, textStatus, jqXHR) {
       $(".loading-panel").addClass("hidden");
       $(".error-panel").removeClass("hidden");
-      value="";
-      data.forEach(function(value){
-        msg+=value;
-      });
-      $(".error-panel .msg").html("msg.:"+msg+" "+textStatus+" "+jqXHR);
+      $(".error-panel .msg").html("msg.:"+data.message+" "+data.code+" "+textStatus+" "+jqXHR);
       $_error=true;
     },
     success: function(response) {
