@@ -25,7 +25,7 @@ function getStats(i){
     error: function(data, textStatus, jqXHR) {
       $(".loading-panel").addClass("hidden");
       $(".error-panel").removeClass("hidden");
-      $(".error-panel .msg").html("msg.:"+data.message+" "+data.code+" "+textStatus+" "+jqXHR);
+      $(".error-panel .msg").html("msg.:"+data.responseText+" "+data.status);
       $_error=true;
     },
     success: function(response) {
