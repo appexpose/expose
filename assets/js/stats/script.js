@@ -13,7 +13,8 @@ var $_error=false;
 getStats(0);
 
 function getStats(i){
-  stats_timestamp=timestamp-(86400*(29-i));
+  //stats_timestamp=timestamp-(86400*(29-i));
+  stats_timestamp=timestamp-(3600*(29-i));
 
   console.log("Start Call "+i);
 
