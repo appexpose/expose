@@ -200,7 +200,6 @@ function login(){
       },
       success: function(response) {
         localStorage.userKey=response.user.userKey;
-        console.log(localStorage.userKey);
       }
     });
   }else{
