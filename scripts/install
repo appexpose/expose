@@ -1,4 +1,0 @@
-#!/bin/bash
-
-chmod 777 ./server/app/resources/brand_avatars/
-chmod 777 ./server/app/resources/message_images/

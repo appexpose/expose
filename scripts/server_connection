@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo 'Citious Server Password: 2CuW2St9c'
-ssh root@citious.com

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Descriptions, messages      http://es.lipsum.com/feed/html
-# Numbers                     https://www.random.org/integers/
-# Names                       http://listofrandomnames.com/index.cfm?generated
-# Convert to lower case       http://convertcase.net/
-
-open http://localhost:8888/citious/scripts/resources/bd_creator.php
