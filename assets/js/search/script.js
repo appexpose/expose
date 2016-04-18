@@ -180,7 +180,7 @@ function login(){
 
   console.error("[login] Start");
 
-  if((typeof localStorage.userKey == 'undefined')||(localStorage.userKey=='')){
+  if((typeof localStorage.userKey == 'undefined')||(localStorage.userKey=='')||(localStorage.userKey=='undefined')){
     console.error("[login] Signup");
 
     $.ajax({
@@ -200,7 +200,7 @@ function login(){
       },
       success: function(response) {
         localStorage.userKey=response.userKey;
-        //console.log(localStorage.userKey);
+        console.log(localStorage.userKey);
       }
     });
   }else{
