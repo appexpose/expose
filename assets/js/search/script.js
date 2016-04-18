@@ -233,7 +233,7 @@ $("#form-search").validate({
     $("#form-search-display>.visible-loading").removeClass("hidden");
     $_number=$("#form-search #number").val();
     $_number=$_number.replace("+","00");
-    $_number=$_number.replace("/ /g","");
+    $_number=$_number.str.split(' ').join('');
     localStorage.number=$_number;
     console.error(localStorage.number);
     list_comments(0,10);
