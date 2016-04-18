@@ -199,7 +199,7 @@ function login(){
         $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
       success: function(response) {
-        localStorage.userKey=response.userKey;
+        localStorage.userKey=response.user.userKey;
         console.log(localStorage.userKey);
       }
     });
