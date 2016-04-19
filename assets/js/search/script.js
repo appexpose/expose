@@ -1,5 +1,6 @@
 
 $_SERVER_PATH="http://expose-server-rest.azurewebsites.net";
+//$_SERVER_PATH="http://localhost:8080";
 
 
 
