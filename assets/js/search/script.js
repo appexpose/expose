@@ -127,7 +127,7 @@ function list_comments(offset,limit){
           $_comments+="<i class='fa fa-star-o'></i>";
         }
         $_comment.content=$_comment.content.replace(/\n/g,"<br/>")
-        $_comments+="    <p class='small text-right'>"+$_comment.created+"</p>";
+        $_comments+="    <p class='small text-right'>"+parseTimestamp($_comment.created)+"</p>";
         $_comments+="  </div>";
         $_comments+="  <div class='col-md-9'>";
         $_comments+="    <div itemprop='articleBody' class='post-text'>";
