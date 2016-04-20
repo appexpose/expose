@@ -59,7 +59,6 @@ function report_comment($_comment_key,$_report_option){
     dataType: "json",
     url: $_SERVER_PATH+"/users/"+localStorage.userKey+"/contacts/"+localStorage.number+"/comments/"+$_comment_key+"/report",
     error: function(data, textStatus, jqXHR) {
-      console.error("[report_comment] Ajax Error");
       $("#form-report-comment-display>.visible-loading").addClass("hidden");
       $("#form-report-comment-display>.visible-error").removeClass("hidden");
     },
@@ -85,7 +84,6 @@ function add_comment(){
       "content":$("#form-add-comment #content").val()
     },
     error: function(data, textStatus, jqXHR) {
-      console.error("[add_comment] Ajax Error");
       $("#form-add-comment-display>.form-display").addClass("hidden");
       $("#form-add-comment-display>.visible-error").removeClass("hidden");
     },
@@ -103,7 +101,6 @@ function list_comments(offset,limit){
     dataType: "json",
     url: $_SERVER_PATH+"/users/"+localStorage.userKey+"/contacts/"+localStorage.number+"/comments/?offset="+offset+"&limit="+limit,
     error: function(data, textStatus, jqXHR) {
-      console.error("[list_comments] Ajax Error");
       $("#form-search-display>.form-display").addClass("hidden");
       $("#form-search-display>.visible-error").removeClass("hidden");
     },
@@ -179,10 +176,7 @@ login();
 
 function login(){
 
-  console.error("[login] Start");
-
   if((typeof localStorage.userKey == 'undefined')||(localStorage.userKey=='')||(localStorage.userKey=='undefined')){
-    console.error("[login] Signup");
 
     $.ajax({
       type: "POST",
@@ -195,7 +189,6 @@ function login(){
         "version":"1.0",
       },
       error: function(data, textStatus, jqXHR) {
-        console.error("[Signup] Ajax Error");
         $("#form-add-comment-display>.form-display").addClass("hidden");
         $("#form-add-comment-display>.visible-error").removeClass("hidden");
       },
@@ -204,7 +197,6 @@ function login(){
       }
     });
   }else{
-    console.error("[login] Login");
 
     $.ajax({
       type: "PUT",
@@ -215,7 +207,6 @@ function login(){
         login();
       },
       success: function(response) {
-        console.error("[login] Success");
       }
     });
   }
@@ -235,7 +226,6 @@ $("#form-search").validate({
     $_number=$_number.replace("+","00");
     $_number=$_number.split(' ').join('');
     localStorage.number=$_number;
-    console.error(localStorage.number);
     list_comments(0,10);
   }
 });
