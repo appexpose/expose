@@ -35,7 +35,7 @@ var delimiter="";
 
 function parseTimestamp($_timestamp){
 
-  new time = Math.floor(new Date().getTime() / 1000);
+  $_time_now = Math.floor(new Date().getTime() / 1000);
 
   if($_timestamp==-1){
     return 'Nunca';
@@ -43,7 +43,7 @@ function parseTimestamp($_timestamp){
   if($_timestamp==0){
     return 'Nunca';
   }
-  $_from_now = time() - $_timestamp;
+  $_from_now = $_time_now - $_timestamp;
   if ($_from_now < 1){
     return 'Ahora';
   }
