@@ -35,6 +35,8 @@ var delimiter="";
 
 function parseTimestamp($_timestamp){
 
+  new time = Math.floor(new Date().getTime() / 1000);
+
   if($_timestamp==-1){
     return 'Nunca';
   }
